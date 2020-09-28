@@ -3,8 +3,8 @@ import i18next from 'i18next';
 i18next.init({
     fallbackLng: 'en',
     resources: {
-        'zh-Hant': {
-            translations: require('../locales/tw/translations.json')
+        ru: {
+            translations: require('../locales/ru/translations.json')
         },
         en: {
             translations: require('../locales/en/translations.json')
@@ -22,6 +22,6 @@ i18next.init({
     },
 });
 
-i18next.languages = ['zh-Hant', 'en'];
+i18next.languages = ['ru', 'en'];
 
 export default i18next;

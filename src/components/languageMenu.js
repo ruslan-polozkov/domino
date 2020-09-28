@@ -4,8 +4,8 @@ import MenuItem from '@material-ui/core/MenuItem'
 import { makeStyles } from '@material-ui/core/styles'
 import { useTranslation } from "react-i18next"
 
-import twLogo from "images/tw.png"
-import enLogo from "images/en.png"
+import ruLogo from "images/flag-rus.png"
+import enLogo from "images/flag-gb.png"
 
 const useStyles = makeStyles({
   selectFocus: {
@@ -45,7 +45,7 @@ const LanguageMenu = (props) => {
       }}
     >
       <MenuItem value={'en'}><img src={enLogo} alt="EN" /></MenuItem>
-      <MenuItem value={'zh-Hant'}><img src={twLogo} alt="TW" /></MenuItem>
+      <MenuItem value={'ru'}><img src={ruLogo} alt="RU" /></MenuItem>
     </Select>
   )
 }

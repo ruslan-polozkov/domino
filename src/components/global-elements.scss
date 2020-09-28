@@ -1,0 +1,19 @@
+.global-container {
+  margin: 0 auto;
+  max-width: 114rem;
+  position: relative;
+
+  @media all and ($desktop-w-normal) {
+    padding: 0 3rem;
+    max-width: 100%;
+  }
+  @media all and ($tablet-w-middle) {
+    padding: 0 2.4rem;
+  }
+  @media all and ($mobile-w-big) {
+    padding: 0 0.8rem;
+  }
+  @media screen and (min-width: 1201px) {
+    max-width: 114rem;
+  }
+}

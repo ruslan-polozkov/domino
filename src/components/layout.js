@@ -11,9 +11,12 @@ import { useStaticQuery, graphql } from "gatsby"
 import { withTrans } from '../i18n/withTrans'
 
 import Header from "./header"
-import "./layout.css"
+import Footer from "./Footer/footer"
+
+import "./layout.scss"
 
 const Layout = ({ children, t, i18n }) => {
+  console.log('LAyout')
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -28,21 +31,8 @@ const Layout = ({ children, t, i18n }) => {
   return (
     <>
       <Header siteTitle={translatedTitle} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
-        <main>
-          {children}
-        </main>
-        <footer>
-          © {new Date().getFullYear()}, {t(`site.footer`)}
-        </footer>
-      </div>
+      { children }
+      <Footer />
     </>
   )
 }

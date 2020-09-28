@@ -1,0 +1,32 @@
+.footer {
+  position: relative;
+  color: #fff;
+  a {
+    color: #fff;
+  }
+  &_shadow {
+    background-color: #163300;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: .9;
+  }
+
+  .global-container {
+    min-height: 30rem;
+
+    .footer_inner {
+      display: flex;
+      justify-content: space-between;
+
+      .footer_inner {
+
+        .inner_column {
+
+        }
+      }
+    }
+  }
+}

@@ -10,7 +10,7 @@ const IndexPage = (props) => {
   const { t } = useTranslation()
 
   return (
-    <div>
+    <Layout>
       <SEO title="Home" />
       <h1>{t('home.title')}</h1>
       {t('home.content').split('\n').map(function(item, key) {
@@ -25,7 +25,7 @@ const IndexPage = (props) => {
         <Image />
       </div>
       <Link to="/page-2/">{t('home.link')}</Link>
-    </div>
+    </Layout>
   )
 }
 

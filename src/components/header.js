@@ -6,11 +6,11 @@ import LanguageMenu from './languageMenu'
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-      display: `flex`,
-      justifyContent: `center`,
-      alignItems: `center`
+      // background: `rebeccapurple`,
+      // marginBottom: `1.45rem`,
+      // display: `flex`,
+      // justifyContent: `center`,
+      // alignItems: `center`
     }}
   >
     <div
@@ -20,8 +20,8 @@ const Header = ({ siteTitle }) => (
         textAlign: `center`
       }}
     >
-      <h1 
-        style={{ 
+      <h1
+        style={{
           margin: `20px 100px`
         }}
       >

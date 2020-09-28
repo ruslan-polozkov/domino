@@ -1,0 +1,53 @@
+html,
+body {
+  min-height: 100vh;
+  position: relative;
+  font-family: "Gilroy", "Helvetica World", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+}
+
+html {
+  height: auto;
+  font-size: 10px;
+  line-height: 10px;
+}
+
+body {
+  overflow-y: auto; // fix for spinner
+  height: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+}
+
+svg,
+use,
+img {
+  margin: 0;
+  padding: 0;
+  max-height: 100%;
+  max-width: 100%;
+  display: inline-block;
+}
+
+use {
+  fill: inherit;
+  width: inherit;
+  height: inherit;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

@@ -1,6 +1,6 @@
 {
   "site": {
-    "Gatsby Default Starter": "Gatsby Default Starter",
+    "Gatsby Default Starter": "Gatsby Default Starter LIVERPOOL",
     "footer": "Built with Gatsby"
   },
   "home": {
@@ -13,5 +13,14 @@
     "title": "Hi from the second page",
     "content": "Welcome to page 2",
     "link": "Go back to the homepage"
+  },
+  "footer": {
+    "footer-logo-desc": "You are ready? Download the app to start playing now!",
+    "footer-about-game": "About game",
+    "footer-advantages-game": "Domino advantages",
+    "footer-types-game": "Domino types",
+    "footer-strategy-game": "Domino strategy",
+    "footer-cookie": "Cookie policy",
+    "footer-privacy": "Privacy"
   }
 }
