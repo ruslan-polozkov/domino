@@ -4,8 +4,8 @@ import MenuItem from '@material-ui/core/MenuItem'
 import { makeStyles } from '@material-ui/core/styles'
 import { useTranslation } from "react-i18next"
 
-import ruLogo from "images/flag-rus.png"
-import enLogo from "images/flag-gb.png"
+import ruLogo from "images/dominoes/flag-rus.png"
+import enLogo from "images/dominoes/flag-gb.png"
 
 const useStyles = makeStyles({
   selectFocus: {

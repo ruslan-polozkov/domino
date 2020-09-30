@@ -1,6 +1,10 @@
+@import "./src/components/variables";
+
 .footer {
+  margin-top: -30rem;
   position: relative;
   color: #fff;
+  background-color: $accent-color;
   a {
     color: #fff;
   }

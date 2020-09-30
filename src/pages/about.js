@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -10,11 +9,9 @@ const SecondPage = () => {
 
   return(
     <Layout>
-      <SEO title="Page two" />
+      <SEO title="About game" />
       <div className="wrapper">
-        <h1>{t('page2.title')}</h1>
-        <p>{t('page2.content')}</p>
-        <Link to="/">{t('page2.link')}</Link>
+
       </div>
     </Layout>
   )
