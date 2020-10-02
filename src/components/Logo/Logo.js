@@ -3,17 +3,15 @@ import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
+import "./logo.scss"
 
 const Logo = () => {
   const data = useStaticQuery(graphql`
-    query Logo {
-      logo: file(relativePath: { eq: "/dominoes/logo.png" }) {
+    query Logotype {
+      image: file(relativePath: { eq: "dominoes/logo.png" }) {
         id
         childImageSharp {
-          fixed (
-            width: 100
-            height: 100
-           ) {
+          fixed (width: 50 height: 50) {
             ...GatsbyImageSharpFixed
           }
           fluid {
@@ -24,15 +22,16 @@ const Logo = () => {
     }
   `)
 
-  console.log('=============================================' ,data)
   return (
-    <Link to="/">
-      <Img
-        fixed={data.logo.childImageSharp.fixed}
-        alt="Domino"
-      />
-      <span>Dominoes</span>
-    </Link>
+    <div className="logo">
+      <Link to="/">
+        <Img
+          fixed={data.image.childImageSharp.fixed}
+          alt="Domino"
+        />
+        <span>Dominoes</span>
+      </Link>
+    </div>
   )
 }
 

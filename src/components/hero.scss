@@ -1,11 +1,21 @@
 .hero {
-  background-color: #ccc;
+  min-height: 76.4rem;
+  padding-top: 12rem;
+  display: flex;
+  align-items: center;
+
   .global-container {
+    z-index: 1;
 
     .hero_inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
       .inner {
         &_content {
+          max-width: 66rem;
+          color: #fff;
 
           .content {
             &_title {

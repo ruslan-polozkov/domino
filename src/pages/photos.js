@@ -7,7 +7,7 @@ export default () => {
   const data = useStaticQuery(graphql`
     query Images {
       images: allFile( filter: {relativeDirectory: {
-        eq: "/dominoes" } }) {
+        eq: "dominoes" } }) {
           nodes {
             id
             childImageSharp {
@@ -23,18 +23,31 @@ export default () => {
             }
           }
       }
-      
+      image: file(relativePath: { eq: "dominoes/logo.png" }) {
+        id
+        childImageSharp {
+          fixed (
+            width: 50
+            height: 50
+           ) {
+            ...GatsbyImageSharpFixed
+          }
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
   console.log('data ===========>', data);
   return (
     <Layout>
-      {/*<Img*/}
-      {/*  fixed={data.image.childImageSharp.fixed}*/}
-      {/*/>*/}
-      {/*<Img*/}
-      {/*  fluid={data.image.childImageSharp.fluid}*/}
-      {/*/>*/}
+      <Img
+        fixed={data.image.childImageSharp.fixed}
+      />
+      <Img
+        fluid={data.image.childImageSharp.fluid}
+      />
       <div className="gallery">
         {data.images.nodes.map(image => (
           <Img
@@ -47,18 +60,3 @@ export default () => {
     </Layout>
   )
 }
-
-// image: file(relativePath: { eq: "dominoes/logo.png" }) {
-//   id
-//   childImageSharp {
-//     fixed (
-//       width: 50
-//     height: 50
-//   ) {
-//     ...GatsbyImageSharpFixed
-//     }
-//     fluid {
-//     ...GatsbyImageSharpFluid
-//     }
-//   }
-// }

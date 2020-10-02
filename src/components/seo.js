@@ -11,6 +11,7 @@ import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 function SEO({ description, lang, meta, title }) {
+
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -68,6 +69,10 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
+      link={[
+        {"rel":"stylesheet", "type": "text/css","charSet":"UTF-8","href":"https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"},
+        {"rel":"stylesheet", "type": "text/css","charSet":"UTF-8","href":"https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"}
+      ]}
     />
   )
 }

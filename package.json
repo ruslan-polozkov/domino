@@ -23,7 +23,11 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1",
-    "react-i18next": "^11.0.1"
+    "react-i18next": "^11.0.1",
+    "react-slick": "^0.27.11",
+    "slick-carousel": "^1.8.1",
+    "use-scroll-position": "0.0.4",
+    "window-scroll-position": "^1.0.2"
   },
   "devDependencies": {
     "gatsby-plugin-root-import": "^2.0.5",

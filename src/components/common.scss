@@ -18,6 +18,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 0 !important;
 }
 
 * {
@@ -39,6 +40,10 @@ img {
   display: inline-block;
 }
 
+img {
+  height: auto;
+}
+
 use {
   fill: inherit;
   width: inherit;
@@ -55,6 +60,7 @@ a {
 
 ul,
 ol {
+  padding: 0;
   margin: 0;
 
   li {
@@ -64,10 +70,22 @@ ol {
 
 article {
   position: relative;
+  padding: 8rem 0;
 }
 
 .wrapper {
   min-height: 100vh;
   padding-bottom: 30rem;
   position: relative;
+}
+
+h1,h2,h3,h3,h4,h5,h6 {
+  padding: 0;
+  margin: 0;
+  font-family: Gilroy-Bold;
+}
+
+p {
+  padding: 0;
+  margin: 0;
 }

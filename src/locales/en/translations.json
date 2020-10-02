@@ -43,5 +43,27 @@
     "strategy-title": "Domino strategy",
     "strategy-text": "Each experienced player will have their own system of how to win at dominoes. And he will sacredly believe that this system is one of the best. However, there are a few rules or tips, following which makes your life in the game much easier, and the chances of winning increase.",
     "strategy-anchor": "Read completely"
+  },
+  "slider": {
+    "slider_item_title_01": "Gienesh Blocks",
+    "slider_item_title_02": "Classic dominoes",
+    "slider_item_title_03": "Dominoes of Five",
+    "slider_item_title_04": "Online game mode",
+    "slider_item_title_05": "",
+    "slider_item_text_01": "The educational game Gyenesh Blocks is a great way to keep your child busy, captivating with really interesting and developing action. Computer games with Dienes blocks are interesting in that the kit does not include a single complete ...",
+    "slider_item_text_02": "The rules of playing dominoes with a computer are no different from playing live. Depending on the number of players, you are dealt seven dice each if the game starts one on one, and five dice if the game involves three or four players. The remaining stones remain in ...",
+    "slider_item_text_03": "Domino 5 is one of the most exciting types of board games. Its rules are practically no different from the classic version, with the exception of one \"small\" nuance. The player's task is not just to throw off all his stones, attaching them to the common ...",
+    "slider_item_text_04": "Where to play dominoes for free when there is no opportunity to get together at home with friends? The answer to this question seems difficult only at first glance, since in our application you can play dominoes without registration, additional SMS ...",
+    "slider_item_text_05": "",
+    "slider_item_more": "Read more"
+  },
+  "advantages": {
+    "context_title": "Domino benefits",
+    "context_text": "Play dominoes for free anytime anywhere! Improve your strategy skills with this classic game",
+    "context_list_item_txt_01": "100% Free to Play",
+    "context_list_item_txt_02": "3 versions of Dominoes: Fives, Block or Classic",
+    "context_list_item_txt_03": "Play Online or Offline (no internet)",
+    "context_list_item_txt_04": "Customize the design of boards and domino tiles!",
+    "context_list_item_txt_05": "The ability to play with friends or random opponents!"
   }
 }

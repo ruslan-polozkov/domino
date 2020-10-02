@@ -4,11 +4,12 @@
   margin-top: -30rem;
   position: relative;
   color: #fff;
-  background-color: $accent-color;
+  padding: 4.8rem 0 3.2rem;
+
   a {
     color: #fff;
   }
-  &_shadow {
+  .shadow {
     background-color: #163300;
     position: absolute;
     top: 0;
@@ -25,10 +26,82 @@
       display: flex;
       justify-content: space-between;
 
-      .footer_inner {
+      .inner_column {
+        width: 100%;
 
-        .inner_column {
+        &.logotype {
+          max-width: 28rem;
+        }
 
+        &.navi {
+          display: flex;
+          justify-content: space-between;
+
+          .column_inner {
+            ul {
+              list-style: none outside none;
+
+              li {
+                margin: 0;
+                padding: 0 0 1.6rem;
+                display: block;
+
+                a {
+                  white-space: nowrap;
+                  display: block;
+                  font-size: 1.8rem;
+                  line-height: 2.4rem;
+                  color: #fff;
+                  font-weight: 400;
+                  cursor: pointer;
+                  text-decoration: none;
+
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+              }
+            }
+
+            &:last-child {
+              padding-left: 8rem;
+            }
+          }
+        }
+
+        &.btns {
+          min-width: 36rem;
+
+          .column_inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+        }
+        .column_inner {
+          .inner_logo {
+            margin-bottom: 3rem;
+          }
+          .inner_desc {
+            font-size: 1.8rem;
+            line-height: 1.222;
+            font-weight: 500;
+            color: #fff;
+          }
+          .inner_img {
+            img {
+              height: 7rem;
+              max-width: 100%;
+            }
+
+            .img {
+              margin-bottom: 1.8rem;
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
         }
       }
     }

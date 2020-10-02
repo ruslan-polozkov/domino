@@ -1,0 +1,67 @@
+.slider {
+  .slider_item {
+    width: 26.4rem !important;
+    height: 49.6rem !important;
+    position: relative;
+    padding: 1.8rem;
+    border-radius: 2.4rem;
+    background-color: #eeeeee;
+    box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.2);
+    color: #000;
+
+    a {
+      color: #000;
+    }
+
+    &.dark {
+      background-color: #3d3d3d;
+      color: #fff;
+      a {
+        color: #fff;
+      }
+    }
+
+    .item_inner {
+      text-align: center;
+
+      .inner {
+        &_title {
+          min-height: 10.3rem;
+          padding-bottom: 2.2rem;
+          border-bottom: .2rem solid #bcbcbc;
+          font-size: 3.2rem;
+          line-height: 3.6rem;
+        }
+        &_text {
+          height: 26.6rem;
+          overflow: hidden;
+          flex: 1 1 auto;
+          margin-top: 2.6rem;
+          margin-bottom: 3rem;
+          text-align: center;
+          font-size: 1.8rem;
+          line-height: 2.4rem;
+          font-weight: 500;
+        }
+        &_link {
+
+          a {
+            font-size: 1.8rem;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+  .slick-list {
+    margin: 0 -1.4rem;
+
+    .slick-slide {
+      display: flex;
+      justify-content: center;
+      padding: 1.4rem;
+    }
+  }
+}
+
