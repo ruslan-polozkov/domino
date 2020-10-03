@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{"6W/B":function(e,a,t){"use strict";t.r(a);var n=t("q1tI"),r=t.n(n),c=t("Bl7J"),l=t("vrFN"),i=t("9Koi");a.default=function(){Object(i.a)().t;return r.a.createElement(c.a,null,r.a.createElement(l.a,{title:"Advantages game"}),r.a.createElement("div",{className:"wrapper"}))}}}]);
+//# sourceMappingURL=component---src-pages-types-js-ec7f44590dfc5bc92b55.js.map

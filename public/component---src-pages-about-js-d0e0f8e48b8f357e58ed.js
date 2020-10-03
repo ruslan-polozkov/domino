@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{"3XHS":function(e,t,a){"use strict";a.r(t);var n=a("q1tI"),r=a.n(n),c=a("Bl7J"),l=a("vrFN"),i=a("9Koi");t.default=function(){Object(i.a)().t;return r.a.createElement(c.a,null,r.a.createElement(l.a,{title:"About game"}),r.a.createElement("div",{className:"wrapper"}))}}}]);
+//# sourceMappingURL=component---src-pages-about-js-d0e0f8e48b8f357e58ed.js.map

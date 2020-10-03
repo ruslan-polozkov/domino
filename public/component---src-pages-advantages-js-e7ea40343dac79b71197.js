@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{qfgs:function(e,a,t){"use strict";t.r(a);var n=t("q1tI"),r=t.n(n),c=t("Bl7J"),l=t("vrFN"),s=t("9Koi");a.default=function(){Object(s.a)().t;return r.a.createElement(c.a,null,r.a.createElement(l.a,{title:"Advantages game"}),r.a.createElement("div",{className:"wrapper"}))}}}]);
+//# sourceMappingURL=component---src-pages-advantages-js-e7ea40343dac79b71197.js.map

@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[11],{C3ep:function(e,t,a){"use strict";a.r(t);var n=a("q1tI"),r=a.n(n),c=a("Bl7J"),l=a("vrFN"),i=a("9Koi");t.default=function(){Object(i.a)().t;return r.a.createElement(c.a,null,r.a.createElement(l.a,{title:"Strategy game"}),r.a.createElement("div",{className:"wrapper"}))}}}]);
+//# sourceMappingURL=component---src-pages-strategy-js-3fe05e733912fa94b4dd.js.map
