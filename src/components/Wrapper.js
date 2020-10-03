@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { graphql, Link, useStaticQuery } from "gatsby"
 // import Image from "./image"
 import BackgroundImage from "gatsby-background-image"
@@ -17,7 +17,26 @@ import advantage04 from "images/dominoes/advantage-4.jpg";
 
 const Wrapper = (props) => {
   const { t } = useTranslation()
-  console.log('PROPS ====>', props)
+  const [accordionState, accordionSetState] = useState('01');
+
+  useEffect(() => {
+  }, []);
+
+  function accordionStateChange(event) {
+    accordionSetState(event.target.closest('.list_item').dataset.advantagesItem)
+
+    const slidersArr = document.querySelectorAll('.inner_slides .list_item')
+
+    slidersArr.forEach(item => {
+      if (item.getAttribute('data-slider-item') === accordionState) {
+        item.classList.add('active')
+      } else {
+        item.classList.remove('active')
+      }
+    })
+
+  }
+
 
   const heroImage = useStaticQuery(graphql`
     query {
@@ -108,7 +127,7 @@ const Wrapper = (props) => {
           </div>
         </div>
       </article>
-      <article className="strategy">
+      <article className="strategy" style={{backgroundColor: "#fafafa"}}>
         <div className="global-container">
           <div className="strategy_inner">
             <div className="inner_img">
@@ -130,42 +149,44 @@ const Wrapper = (props) => {
         <div className="global-container">
           <div className="advantages_inner">
             <div className="inner_context">
-              <div className="context_title">{t('advantages.context_title')}</div>
+              <div className="context_title">
+                <span>{t('advantages.context_title')}</span>
+              </div>
               <div className="context_text">{t('advantages.context_text')}</div>
               <ul className="context_list">
-                <li className="list_item">
-                  <span className="item_txt" data-advantages-item='01'>{t('advantages.context_list_item_txt_01')}</span>
+                <li className="list_item active" data-advantages-item='01' onClick={accordionStateChange}>
+                  <span className="item_txt" >{t('advantages.context_list_item_txt_01')}</span>
                 </li>
-                <li className="list_item">
-                  <span className="item_txt" data-advantages-item='02'>{t('advantages.context_list_item_txt_02')}</span>
+                <li className="list_item" data-advantages-item='02' onClick={accordionStateChange}>
+                  <span className="item_txt">{t('advantages.context_list_item_txt_02')}</span>
                 </li>
-                <li className="list_item">
-                  <span className="item_txt" data-advantages-item='03'>{t('advantages.context_list_item_txt_03')}</span>
+                <li className="list_item" data-advantages-item='03' onClick={accordionStateChange}>
+                  <span className="item_txt">{t('advantages.context_list_item_txt_03')}</span>
                 </li>
-                <li className="list_item">
-                  <span className="item_txt" data-advantages-item='04'>{t('advantages.context_list_item_txt_04')}</span>
+                <li className="list_item" data-advantages-item='04' onClick={accordionStateChange}>
+                  <span className="item_txt">{t('advantages.context_list_item_txt_04')}</span>
                 </li>
-                <li className="list_item">
-                  <span className="item_txt" data-advantages-item='05'>{t('advantages.context_list_item_txt_05')}</span>
+                <li className="list_item" data-advantages-item='05' onClick={accordionStateChange}>
+                  <span className="item_txt">{t('advantages.context_list_item_txt_05')}</span>
                 </li>
               </ul>
             </div>
 
             <div className="inner_slides">
-              <ul className="slides_list">
-                <li className="list_item">
+              <ul className={"slides_list "}>
+                <li className="list_item active" data-slider-item='01'>
                   <img src={advantage01} alt={t('advantages.context_list_item_txt_01')} />
                 </li>
-                <li className="list_item">
+                <li className="list_item" data-slider-item='02'>
                   <img src={advantage02} alt={t('advantages.context_list_item_txt_02')} />
                 </li>
-                <li className="list_item">
+                <li className="list_item" data-slider-item='03'>
                   <img src={advantage03} alt={t('advantages.context_list_item_txt_03')} />
                 </li>
-                <li className="list_item">
+                <li className="list_item" data-slider-item='04'>
                   <img src={advantage04} alt={t('advantages.context_list_item_txt_04')} />
                 </li>
-                <li className="list_item">
+                <li className="list_item" data-slider-item='05'>
                   <img src={advantage01} alt={t('advantages.context_list_item_txt_05')} />
                 </li>
               </ul>
