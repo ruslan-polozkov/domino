@@ -10,8 +10,8 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { withTrans } from '../i18n/withTrans'
 
-import Header from "./Header/header"
-import Footer from "./Footer/footer"
+import Header from "./Header/header.js"
+import Footer from "./Footer/footer.js"
 
 import "./layout.scss"
 
