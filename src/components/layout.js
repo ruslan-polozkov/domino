@@ -11,7 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { withTrans } from '../i18n/withTrans'
 
 import Header from "./Header/header.js"
-import Footer from "./Footer/footer.js"
+import Footer from "./Footer/Footer.js"
 
 import "./layout.scss"
 
