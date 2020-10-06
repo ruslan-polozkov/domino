@@ -1,3 +1,5 @@
+@import "media";
+
 .slider {
   .slider_item {
     cursor: pointer;
@@ -10,6 +12,10 @@
     box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.2);
     transition: 480ms;
     color: #000;
+
+    @media all and ($mobile-w-normal) {
+      width: 30rem !important;
+    }
 
     a {
       color: #000;

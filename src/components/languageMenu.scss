@@ -4,7 +4,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  min-width: 15.4rem;
+  min-width: 180px;
   padding: 0 1.2rem;
   border: 1px solid transparent;
   border-radius: 3px 3px 0 0;
@@ -45,7 +45,7 @@
     border-top: none;
     border-radius: 0 0 3px 3px;
     margin-bottom: -2.6rem;
-    min-width: 15.4rem;
+    min-width: 180px;
     z-index: 1;
     transition: 240ms;
     opacity: 0;
@@ -91,16 +91,20 @@
 }
 
 .header {
-  &.active,
-  &.fixed {
+  &.opened {
 
     .language_menu {
-      background-color: #fff;
+      position: absolute;
+      bottom: 2.4rem;
+      left: 50%;
+      transform: translateX(-50%);
+
       .menu_list {
-        background-color: #fff;
         .menu_item {
           span {
-            color: #000;
+            color: #fff !important;
+            font-size: 2.4rem;
+            line-height: 3rem;
           }
 
           &:hover {
@@ -108,6 +112,30 @@
           }
         }
       }
+    }
+  }
+
+  &.opened {
+    .language_menu {
+      .menu_list {
+        transform: translateY(-100%);
+        margin: 0;
+        top: 2px;
+        bottom: initial;
+        border-bottom: none;
+        border-radius: 3px 3px 0 0;
+        border-top: 1px solid #cccccc;
+      }
+
+      &.open {
+        border-top: none;
+        border-bottom: 1px solid #ccc;
+      }
+    }
+    .active_item span {
+      color: #fff !important;
+      font-size: 2.4rem;
+      line-height: 3rem;
     }
   }
 }

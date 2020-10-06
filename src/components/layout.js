@@ -12,6 +12,7 @@ import { withTrans } from "../i18n/withTrans"
 
 import Header from "./Header/header.js"
 import Footer from "./Footer/Footer.js"
+import ToUp from "./ToUp";
 
 import "./layout.scss"
 
@@ -32,6 +33,7 @@ const Layout = ({ children, t, i18n }) => {
       <Header siteTitle={translatedTitle} />
       {children}
       <Footer />
+      <ToUp />
     </>
   )
 }

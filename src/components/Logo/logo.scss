@@ -1,4 +1,7 @@
 .logo {
+  position: relative;
+  z-index: 3;
+
   a {
     display: inline-flex;
     align-items: center;
@@ -16,6 +19,15 @@
       line-height: 1.1;
       font-family: Gilroy-Bold;
       color: #fff;
+    }
+  }
+}
+.header {
+  &.opened {
+    a {
+      span {
+        color: #fff !important;
+      }
     }
   }
 }

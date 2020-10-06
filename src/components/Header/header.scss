@@ -57,21 +57,23 @@
         }
 
         @media all and ("max-width: 1100px") {
-          position: absolute;
-          right: 0;
+          opacity: 0;
+          pointer-events: none;
+          position: fixed;
+          top: 0;
           left: 0;
-          top: 100%;
-          background-color: #fff;
-          transition: background-color 460ms,transform 460ms;
-          transform: translateY(-100rem);
-          z-index: -1;
-          flex-direction: column;
-          align-items: center;
-          padding-bottom: 2.4rem;
-          box-shadow: 0 2px 2px rgba(0,0,0,.1);
+          bottom: 0;
+          right: 0;
+          background: rgba(0,0,0,.8);
+          width: 100%;
+          height: 100vh;
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          padding-top: 14rem;
 
           nav {
-            margin: 0 auto 1.8rem;
+            margin: 0 auto 0 0;
 
             ul {
               flex-direction: column;
@@ -80,7 +82,9 @@
                 margin-left: 0;
 
                 a {
-                  color: #000;
+                  font-size: 3.6rem;
+                  line-height: 6rem;
+                  color: #fff !important;
                 }
               }
             }
@@ -90,13 +94,14 @@
 
 
       .header_burger {
+        position: relative;
+        z-index: 3;
         margin-top: .2rem;
         display: none;
         width: 4.8rem;
         height: 4.8rem;
         justify-content: center;
         align-items: center;
-        position: relative;
         cursor: pointer;
         flex-shrink: 0;
         border-radius: 3px;
@@ -152,16 +157,17 @@
           }
         }
 
-
         &.open {
           .burger_icon {
             background-color: transparent;
 
             &:before {
               transform: translateY(2px) rotateZ(45deg);
+              background-color: #fff !important;
             }
             &:after {
               transform: translateY(-2px) rotateZ(-45deg);
+              background-color: #fff !important;
             }
           }
         }
@@ -212,10 +218,6 @@
         span {
           color: #000;
         }
-
-        .header_menu {
-          transform: translateY(0) !important;
-        }
       }
 
       .header_burger {
@@ -228,6 +230,11 @@
           }
         }
       }
+    }
+
+    .header_menu {
+      opacity: 1 !important;
+      pointer-events: auto !important;
     }
   }
 }

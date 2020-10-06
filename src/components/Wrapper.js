@@ -21,7 +21,6 @@ const Wrapper = props => {
   const settingsSlider = {
     speed: 500,
     slidesToScroll: 1,
-    mobileFirst: true,
     slidesToShow: 3,
     arrows: true,
     dots: false,
@@ -33,17 +32,17 @@ const Wrapper = props => {
     touchMove: true,
     responsive: [
       {
-        breakpoint: 721,
-        settings: "unslick",
+        breakpoint: 9999,
+        settings: "unslick"
       },
       {
         breakpoint: 720,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-        },
-      },
-    ],
+        }
+      }
+    ]
   }
 
   function accordionStateChange(event) {
