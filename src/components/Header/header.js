@@ -7,7 +7,18 @@ import Burger from "../Burger"
 import "./header.scss"
 
 const Header = ({ siteTitle }) => {
-  const [count, setCount] = useState(0);
+  const [open, setOpen] = useState(false);
+
+  const setOpenedHeaderState = () => {
+    const header = document.querySelector('.header');
+    const burger = document.querySelector('.header_burger');
+
+    setOpen(!open)
+
+    open ? header.classList.add('opened') : header.classList.remove('opened')
+    open ? burger.classList.add('open') : burger.classList.remove('open')
+  };
+
 
   useEffect(() => {
     const header = document.querySelector('.header');
@@ -26,21 +37,15 @@ const Header = ({ siteTitle }) => {
         header.classList.remove('fixed')
       }
     });
-
-    // Обновляем заголовок документа с помощью API браузера
-    // document.title = `Вы нажали ${count} раз`;
   });
 
   return (
     <header className="header">
       <div className="global-container">
         <div className="header_inner">
-          {/*<button onClick={() => setCount(count + 1)}>*/}
-          {/*  Нажми на меня*/}
-          {/*</button>*/}
           <Logo />
           <Navigation />
-          <Burger />
+          <Burger onClick={setOpenedHeaderState} open={setOpenedHeaderState}/>
         </div>
       </div>
     </header>

@@ -80,6 +80,13 @@ ol {
 article {
   position: relative;
   padding: 8rem 0;
+
+  @media screen and ("max-width: 960px") {
+    padding: 6rem 0;
+  }
+  @media screen and ("max-width: 560px") {
+    padding: 4rem 0;
+  }
 }
 
 .wrapper {

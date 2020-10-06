@@ -34,6 +34,9 @@
         }
         &_text {
           height: 26.6rem;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 11;
           overflow: hidden;
           flex: 1 1 auto;
           margin-top: 2.6rem;

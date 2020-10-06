@@ -1,3 +1,5 @@
+@import "media";
+
 .hero {
   min-height: 76.4rem;
   padding-top: 12rem;
@@ -33,7 +35,9 @@
           }
         }
         &_img {
-
+          @media all and ($tablet-w-middle){
+            display: none;
+          }
         }
       }
     }

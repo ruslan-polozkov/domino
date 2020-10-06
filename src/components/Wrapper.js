@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react"
 import { graphql, Link, useStaticQuery } from "gatsby"
-// import Image from "./image"
 import BackgroundImage from "gatsby-background-image"
 import { useTranslation } from "react-i18next"
-import Slider from "./Slider"
+import SliderMy from "./Slider"
+import Slider from "react-slick"
 
 import phone from "images/dominoes/phone-domino.png";
 import box from "images/dominoes/domino-box.jpg";
@@ -18,15 +18,47 @@ import advantage04 from "images/dominoes/advantage-4.jpg";
 const Wrapper = (props) => {
   const { t } = useTranslation()
   const [accordionState, accordionSetState] = useState('01');
+  const settingsSlider = {
+    speed: 500,
+    slidesToScroll: 1,
+    mobileFirst: true,
+    slidesToShow: 3,
+    arrows: true,
+    dots: false,
+    centerMode: true,
+    variableWidth: true,
+    infinite: true,
+    focusOnSelect: true,
+    cssEase: 'linear',
+    touchMove: true,
+    responsive: [
+      {
+        breakpoint: 721,
+        settings: 'unslick'
+      },
+      {
+        breakpoint: 720,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  }
 
   useEffect(() => {
+    window.addEventListener("resize", function() {
+      // slickyFy()
+    });
   }, []);
 
   function accordionStateChange(event) {
     accordionSetState(event.target.closest('.list_item').dataset.advantagesItem)
 
     const slidersArr = document.querySelectorAll('.inner_slides .list_item')
+    const menuArr= document.querySelectorAll('.context_list .list_item')
 
+    menuArr.forEach(item => item.classList.remove('active'))
     slidersArr.forEach(item => {
       if (item.getAttribute('data-slider-item') === accordionState) {
         item.classList.add('active')
@@ -35,6 +67,7 @@ const Wrapper = (props) => {
       }
     })
 
+    event.target.closest('.list_item').classList.add('active')
   }
 
 
@@ -123,7 +156,7 @@ const Wrapper = (props) => {
       <article className="game-list">
         <div className="global-container">
           <div className="list_inner">
-            <Slider />
+            <SliderMy />
           </div>
         </div>
       </article>
@@ -153,22 +186,29 @@ const Wrapper = (props) => {
                 <span>{t('advantages.context_title')}</span>
               </div>
               <div className="context_text">{t('advantages.context_text')}</div>
-              <ul className="context_list">
-                <li className="list_item active" data-advantages-item='01' onClick={accordionStateChange}>
-                  <span className="item_txt" >{t('advantages.context_list_item_txt_01')}</span>
-                </li>
-                <li className="list_item" data-advantages-item='02' onClick={accordionStateChange}>
-                  <span className="item_txt">{t('advantages.context_list_item_txt_02')}</span>
-                </li>
-                <li className="list_item" data-advantages-item='03' onClick={accordionStateChange}>
-                  <span className="item_txt">{t('advantages.context_list_item_txt_03')}</span>
-                </li>
-                <li className="list_item" data-advantages-item='04' onClick={accordionStateChange}>
-                  <span className="item_txt">{t('advantages.context_list_item_txt_04')}</span>
-                </li>
-                <li className="list_item" data-advantages-item='05' onClick={accordionStateChange}>
-                  <span className="item_txt">{t('advantages.context_list_item_txt_05')}</span>
-                </li>
+              <ul className="context_list slick-center-wrap">
+                <Slider className={'KUKU'} {...settingsSlider}>
+                  <li className="list_item active" data-advantages-item='01' onClick={accordionStateChange}>
+                    <img className="item_pic" src={advantage01} alt={t('advantages.context_list_item_txt_01')} />
+                    <span className="item_txt" >{t('advantages.context_list_item_txt_01')}</span>
+                  </li>
+                  <li className="list_item" data-advantages-item='02' onClick={accordionStateChange}>
+                    <img className="item_pic" src={advantage02} alt={t('advantages.context_list_item_txt_02')} />
+                    <span className="item_txt">{t('advantages.context_list_item_txt_02')}</span>
+                  </li>
+                  <li className="list_item" data-advantages-item='03' onClick={accordionStateChange}>
+                    <img className="item_pic" src={advantage03} alt={t('advantages.context_list_item_txt_03')} />
+                    <span className="item_txt">{t('advantages.context_list_item_txt_03')}</span>
+                  </li>
+                  <li className="list_item" data-advantages-item='04' onClick={accordionStateChange}>
+                    <img className="item_pic" src={advantage04} alt={t('advantages.context_list_item_txt_04')} />
+                    <span className="item_txt">{t('advantages.context_list_item_txt_04')}</span>
+                  </li>
+                  <li className="list_item" data-advantages-item='05' onClick={accordionStateChange}>
+                    <img className="item_pic" src={advantage01} alt={t('advantages.context_list_item_txt_05')} />
+                    <span className="item_txt">{t('advantages.context_list_item_txt_05')}</span>
+                  </li>
+                </Slider>
               </ul>
             </div>
 

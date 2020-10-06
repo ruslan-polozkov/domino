@@ -1,4 +1,6 @@
 @import "variables";
+@import "media";
+
 .about,
 .strategy {
   .global-container {
@@ -70,6 +72,15 @@
               }
             }
           }
+        }
+      }
+
+      @media all and ($desktop-w-normal) {
+        flex-direction: column;
+        justify-content: center;
+
+        .inner_img {
+          margin-bottom: 2.4rem;
         }
       }
     }
