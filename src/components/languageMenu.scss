@@ -108,7 +108,7 @@
           }
 
           &:hover {
-            background-color: #fafafa;
+            background-color: rgba(0, 0, 0, 0.8);
           }
         }
       }
@@ -137,5 +137,21 @@
       font-size: 2.4rem;
       line-height: 3rem;
     }
+  }
+
+  &.fixed:not(.opened),
+  &.active:not(.opened) {
+   .language_menu {
+     background-color: #fff;
+     .menu_list {
+       background-color: #fff;
+
+       .menu_item {
+         &:hover {
+           background-color: #fafafa;
+         }
+       }
+     }
+   }
   }
 }

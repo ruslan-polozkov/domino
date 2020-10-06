@@ -32,6 +32,18 @@
               line-height: 1.2083;
               color: #fff;
             }
+            &_img {
+              display: flex;
+
+              .img {
+                height: 7rem;
+                max-width: 100%;
+
+                &:first-child {
+                  margin-right: 1.8rem;
+                }
+              }
+            }
           }
         }
         &_img {
