@@ -46,5 +46,3 @@ import Img from "gatsby-image"
 // }
 //
 // export default Image
-
-

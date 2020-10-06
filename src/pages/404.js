@@ -24,9 +24,7 @@ const NotFoundPage = () => {
     <Layout>
       <SEO title="Domino game" />
       <div className="wrapper">
-        <BackgroundImage
-          fluid={data.desktop.childImageSharp.fluid}
-        >
+        <BackgroundImage fluid={data.desktop.childImageSharp.fluid}>
           <article className="main error">
             <div className="global-container">
               <div className="main_content">

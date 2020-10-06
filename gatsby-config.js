@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require("path")
 
 module.exports = {
   siteMetadata: {
@@ -33,12 +33,12 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-root-import',
+      resolve: "gatsby-plugin-root-import",
       options: {
-        src: path.join(__dirname, 'src'),
-        i18n: path.join(__dirname, 'src/i18n'),
-        images: path.join(__dirname, 'src/images')
-      }
+        src: path.join(__dirname, "src"),
+        i18n: path.join(__dirname, "src/i18n"),
+        images: path.join(__dirname, "src/images"),
+      },
     },
     // {
     //   resolve: `gatsby-plugin-layout`,

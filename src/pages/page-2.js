@@ -8,13 +8,13 @@ import { useTranslation } from "react-i18next"
 const SecondPage = () => {
   const { t } = useTranslation()
 
-  return(
+  return (
     <Layout>
       <SEO title="Page two" />
       <div className="wrapper">
-        <h1>{t('page2.title')}</h1>
-        <p>{t('page2.content')}</p>
-        <Link to="/">{t('page2.link')}</Link>
+        <h1>{t("page2.title")}</h1>
+        <p>{t("page2.content")}</p>
+        <Link to="/">{t("page2.link")}</Link>
       </div>
     </Layout>
   )

@@ -6,10 +6,10 @@ import Img from "gatsby-image"
 
 import { useTranslation } from "react-i18next"
 import Logo from "../Logo/Logo"
-import "./footer.scss";
+import "./footer.scss"
 
-import apple from "images/dominoes/logo-app-store.png";
-import google from "images/dominoes/logo-gplay.png";
+import apple from "images/dominoes/logo-app-store.png"
+import google from "images/dominoes/logo-gplay.png"
 
 const Footer = () => {
   const { t } = useTranslation()
@@ -22,7 +22,6 @@ const Footer = () => {
           }
         }
       }
-     
     }
   `)
   // apple: file(relativePath: { eq: "dominoes/logo-app-store.png" }) {
@@ -34,9 +33,7 @@ const Footer = () => {
   //   }
   // }
   return (
-    <BackgroundImage
-      fluid={data.desktop.childImageSharp.fluid}
-    >
+    <BackgroundImage fluid={data.desktop.childImageSharp.fluid}>
       <footer className="footer">
         <div className="shadow"></div>
         <div className="global-container">
@@ -46,19 +43,19 @@ const Footer = () => {
                 <div className="inner_logo">
                   <Logo />
                 </div>
-                <div className="inner_desc">{t('footer.footer-logo-desc')}</div>
+                <div className="inner_desc">{t("footer.footer-logo-desc")}</div>
               </div>
             </div>
             <div className="inner_column btns">
               <div className="column_inner">
                 <div className="inner_img">
                   <div className="img img_apple">
-                    <Link to='/'>
+                    <Link to="/">
                       <img src={apple} alt="" />
                     </Link>
                   </div>
                   <div className="img img_google">
-                    <Link to='/'>
+                    <Link to="/">
                       <img src={google} alt="" />
                     </Link>
                   </div>
@@ -69,35 +66,39 @@ const Footer = () => {
               <div className="column_inner">
                 <ul>
                   <li>
-                    <Link to="/about">{t('footer.footer-about-game')}</Link>
+                    <Link to="/about">{t("footer.footer-about-game")}</Link>
                   </li>
                   <li>
-                    <Link to="/advantages">{t('footer.footer-advantages-game')}</Link>
+                    <Link to="/advantages">
+                      {t("footer.footer-advantages-game")}
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/types">{t('footer.footer-types-game')}</Link>
+                    <Link to="/types">{t("footer.footer-types-game")}</Link>
                   </li>
                   <li>
-                    <Link to="/strategy">{t('footer.footer-strategy-game')}</Link>
+                    <Link to="/strategy">
+                      {t("footer.footer-strategy-game")}
+                    </Link>
                   </li>
                 </ul>
               </div>
               <div className="column_inner">
                 <ul>
                   <li>
-                    <Link to="/">{t('footer.footer-cookie')}</Link>
+                    <Link to="/">{t("footer.footer-cookie")}</Link>
                   </li>
                   <li>
-                    <Link to="/">{t('footer.footer-privacy')}</Link>
+                    <Link to="/">{t("footer.footer-privacy")}</Link>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
-    </footer>
+      </footer>
     </BackgroundImage>
   )
 }
 
-export default Footer;
+export default Footer

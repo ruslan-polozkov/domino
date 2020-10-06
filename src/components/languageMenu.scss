@@ -4,7 +4,10 @@
   position: relative;
   display: flex;
   align-items: center;
-  min-width: 13rem;
+  min-width: 15.4rem;
+  padding: 0 1.2rem;
+  border: 1px solid transparent;
+  border-radius: 3px 3px 0 0;
 
   .menu_active {
     position: relative;
@@ -37,13 +40,21 @@
   .menu_list {
     position: absolute;
     bottom: -100%;
+    left: -1px;
+    border: 1px solid transparent;
+    border-top: none;
+    border-radius: 0 0 3px 3px;
+    margin-bottom: -2.6rem;
+    min-width: 15.4rem;
     z-index: 1;
     transition: 240ms;
     opacity: 0;
     pointer-events: none;
     transform: translateY(-2rem);
+    background: rgba(0,0,0,.4);
 
     .menu_item {
+      padding: .6rem 1.2rem;
       display: flex;
       align-items: center;
 
@@ -59,14 +70,19 @@
         color: #fff;
       }
 
-      &:first-child {
-        margin-bottom: .6rem;
+      &:hover {
+        background: rgba(0,0,0,.8);
       }
     }
   }
 
   &.open {
+    border-color: #ccc;
+    border-bottom: none;
+    background: rgba(0,0,0,.4);
+
     .menu_list {
+      border-color: #ccc;
       transform: translateY(0);
       opacity: 1;
       pointer-events: auto;
@@ -79,10 +95,16 @@
   &.fixed {
 
     .language_menu {
+      background-color: #fff;
       .menu_list {
+        background-color: #fff;
         .menu_item {
           span {
             color: #000;
+          }
+
+          &:hover {
+            background-color: #fafafa;
           }
         }
       }

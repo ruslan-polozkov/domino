@@ -8,7 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { withTrans } from '../i18n/withTrans'
+import { withTrans } from "../i18n/withTrans"
 
 import Header from "./Header/header.js"
 import Footer from "./Footer/Footer.js"
@@ -30,7 +30,7 @@ const Layout = ({ children, t, i18n }) => {
   return (
     <>
       <Header siteTitle={translatedTitle} />
-      { children }
+      {children}
       <Footer />
     </>
   )
@@ -41,4 +41,3 @@ Layout.propTypes = {
 }
 
 export default withTrans(Layout)
-

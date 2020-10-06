@@ -11,7 +11,7 @@ const Logo = () => {
       image: file(relativePath: { eq: "dominoes/logo.png" }) {
         id
         childImageSharp {
-          fixed (width: 50 height: 50) {
+          fixed(width: 50, height: 50) {
             ...GatsbyImageSharpFixed
           }
           fluid {
@@ -25,14 +25,11 @@ const Logo = () => {
   return (
     <div className="logo">
       <Link to="/">
-        <Img
-          fixed={data.image.childImageSharp.fixed}
-          alt="Domino"
-        />
+        <Img fixed={data.image.childImageSharp.fixed} alt="Domino" />
         <span>Dominoes</span>
       </Link>
     </div>
   )
 }
 
-export default Logo;
+export default Logo

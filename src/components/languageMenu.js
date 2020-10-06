@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next"
 import ruLogo from "images/dominoes/flag-rus.png"
 import enLogo from "images/dominoes/flag-gb.png"
 
-const LanguageMenu = (props) => {
+const LanguageMenu = props => {
   const { t, i18n } = useTranslation()
 
   const [language, setValues] = useState({
@@ -28,25 +28,37 @@ const LanguageMenu = (props) => {
       onClick={toggleOpen}
     >
       <div className="menu_active">
-        <div className={language.language === "en" ? "active_item active" : "active_item"}>
+        <div
+          className={
+            language.language === "en" ? "active_item active" : "active_item"
+          }
+        >
           <img src={enLogo} alt="EN" />
           <span>English</span>
         </div>
-        <div className={language.language === "ru" ? "active_item active" : "active_item"}>
+        <div
+          className={
+            language.language === "ru" ? "active_item active" : "active_item"
+          }
+        >
           <img src={ruLogo} alt="RU" />
           <span>Русский</span>
         </div>
       </div>
       <div className="menu_list">
-        <div className="menu_item"
-             data-value={"en"}
-             onClick={(e) => handleChange(e)}>
+        <div
+          className="menu_item"
+          data-value={"en"}
+          onClick={e => handleChange(e)}
+        >
           <img src={enLogo} alt="EN" />
           <span>English</span>
         </div>
-        <div className="menu_item"
-             data-value={"ru"}
-             onClick={(e) => handleChange(e)}>
+        <div
+          className="menu_item"
+          data-value={"ru"}
+          onClick={e => handleChange(e)}
+        >
           <img src={ruLogo} alt="RU" />
           <span>Русский</span>
         </div>

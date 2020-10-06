@@ -3,43 +3,15 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { useTranslation } from "react-i18next"
-import BackgroundImage from "gatsby-background-image"
-import { graphql, useStaticQuery } from "gatsby"
+import WrapperSecond from "../components/WrapperSecond"
 
-const SecondPage = () => {
+const SecondPage = ({ path, children }) => {
   const { t } = useTranslation()
-  const data = useStaticQuery(graphql`
-    query {
-      desktop: file(relativePath: { eq: "dominoes/main-bg.jpg" }) {
-        childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-  `)
 
-  return(
+  return (
     <Layout>
       <SEO title="About game" />
-      <div className="wrapper">
-        <BackgroundImage
-          fluid={data.desktop.childImageSharp.fluid}
-        >
-          <article className="main about">
-            <div className="global-container">
-              <div className="main_content">
-                <div className="content_title">
-                  <h2>{t('about.content_title')}</h2>
-                </div>
-                <div className="content_img"></div>
-                <div className="content_text">{t('about.content_text')}</div>
-              </div>
-            </div>
-          </article>
-        </BackgroundImage>
-      </div>
+      <WrapperSecond props={path} />
     </Layout>
   )
 }
