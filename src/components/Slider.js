@@ -49,7 +49,7 @@ const SliderMy = () => {
             </div>
             <div className="inner_text">{t("slider.slider_item_text_01")}</div>
             <div className="inner_link">
-              <Link to="/">{t("slider.slider_item_more")}</Link>
+              <Link to={"/dyenesh-blocks"} target="_blank">{t("slider.slider_item_more")}</Link>
             </div>
           </div>
         </div>
@@ -60,7 +60,7 @@ const SliderMy = () => {
             </div>
             <div className="inner_text">{t("slider.slider_item_text_02")}</div>
             <div className="inner_link">
-              <Link to="/">{t("slider.slider_item_more")}</Link>
+              <Link to="/classic-game">{t("slider.slider_item_more")}</Link>
             </div>
           </div>
         </div>
@@ -71,7 +71,7 @@ const SliderMy = () => {
             </div>
             <div className="inner_text">{t("slider.slider_item_text_03")}</div>
             <div className="inner_link">
-              <Link to="/">{t("slider.slider_item_more")}</Link>
+              <Link to="/dominoes-of-five">{t("slider.slider_item_more")}</Link>
             </div>
           </div>
         </div>
@@ -82,7 +82,7 @@ const SliderMy = () => {
             </div>
             <div className="inner_text">{t("slider.slider_item_text_04")}</div>
             <div className="inner_link">
-              <Link to="/">{t("slider.slider_item_more")}</Link>
+              <Link to="/online-game-mode">{t("slider.slider_item_more")}</Link>
             </div>
           </div>
         </div>
