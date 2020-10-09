@@ -66,7 +66,7 @@ const Footer = () => {
               <div className="column_inner">
                 <ul>
                   <li>
-                    <Link to="/about">{t("footer.footer-about-game")}</Link>
+                    <Link to="/istoriya-domino">{t("footer.footer-about-game")}</Link>
                   </li>
                   <li>
                     <Link to="/advantages">
@@ -74,7 +74,16 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/types">{t("footer.footer-types-game")}</Link>
+                    <Link to="/domino-online">{t("header.header-types-domino-online")}</Link>
+                  </li>
+                  <li>
+                    <Link to="/domino-klassicheskoe">{t("header.header-types-domino-klassicheskoe")}</Link>
+                  </li>
+                  <li>
+                    <Link to="/domino-5">{t("header.header-types-domino-5")}</Link>
+                  </li>
+                  <li>
+                    <Link to="/domino-blok">{t("header.header-types-domino-blok")}</Link>
                   </li>
                   <li>
                     <Link to="/strategiya-v-domino">

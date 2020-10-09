@@ -57,7 +57,6 @@
                 display: block;
 
                 a {
-                  white-space: nowrap;
                   display: block;
                   font-size: 1.8rem;
                   line-height: 2.4rem;
@@ -69,12 +68,24 @@
                   &:hover {
                     text-decoration: underline;
                   }
+
+                  @media all and ($tablet-w-normal) {
+                    text-align: center;
+                  }
                 }
               }
             }
 
             &:last-child {
               padding-left: 8rem;
+            }
+
+            @media all and ($tablet-w-normal) {
+              width: 50%;
+
+              &:last-child {
+                padding-left: 0;
+              }
             }
           }
 

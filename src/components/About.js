@@ -8,10 +8,10 @@ const About = () => (
         <div className="global-container">
           <div className="main_content">
             <div className="content_title">
-              <h2>{t("about.content_title")}</h2>
+              <h2>{t("istoriya-domino.content_title")}</h2>
             </div>
             <div className="content_img"></div>
-            <div className="content_text">{t("about.content_text")}</div>
+            <div className="content_text">{t("istoriya-domino.content_text")}</div>
           </div>
         </div>
       </article>

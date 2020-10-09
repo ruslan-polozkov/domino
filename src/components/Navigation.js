@@ -20,7 +20,7 @@ const Navigation = () => {
       <nav className="menu_nav">
         <ul className="nav_list">
           <li className="list_item">
-            <Link to={"/about"}>{t("header.header-about")}</Link>
+            <Link to={"/istoriya-domino"}>{t("header.header-about")}</Link>
           </li>
           <li className="list_item">
             <Link to={"/advantages"}>{t("header.header-advantages")}</Link>

@@ -127,11 +127,11 @@ const Wrapper = props => {
             </div>
             <div className="inner_content">
               <h2 className="content_title">
-                <span>{t("about.about-title")}</span>
+                <span>{t("istoriya-domino.about-title")}</span>
               </h2>
-              <p className="content_text">{t("about.about-text")}</p>
+              <p className="content_text">{t("istoriya-domino.about-text")}</p>
               <div className="content_link">
-                <Link to="/about">{t("about.about-anchor")}</Link>
+                <Link to="/istoriya-domino">{t("istoriya-domino.about-anchor")}</Link>
               </div>
             </div>
           </div>

@@ -71,7 +71,7 @@ const SliderMy = () => {
             </div>
             <div className="inner_text">{t("slider.slider_item_text_03")}</div>
             <div className="inner_link">
-              <Link to="/dominoes-of-five">{t("slider.slider_item_more")}</Link>
+              <Link to="/domino-5">{t("slider.slider_item_more")}</Link>
             </div>
           </div>
         </div>
