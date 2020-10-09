@@ -23,17 +23,15 @@ const Header = ({ siteTitle }) => {
 
   useEffect(() => {
     const header = document.querySelector(".header")
-    const about = document.querySelector(".about")
 
     window.addEventListener("scroll", () => {
-      if (!about) return;
-      if (about.getBoundingClientRect().y < 500) {
+      if (window.scrollY > 300) {
         header.classList.add("active")
       } else {
         header.classList.remove("active")
       }
 
-      if (about.getBoundingClientRect().y < 200) {
+      if (window.scrollY > 500) {
         header.classList.add("fixed")
       } else {
         header.classList.remove("fixed")
