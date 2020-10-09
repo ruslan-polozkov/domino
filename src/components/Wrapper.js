@@ -82,7 +82,7 @@ const Wrapper = props => {
 
     active.classList.remove('active')
   }
-  if (document.querySelector('.advantages') && window.innerWidth <= 721) {
+  if (window.querySelector('.advantages') && window.innerWidth <= 721) {
     setInterval(highLight, 5000)
   }
 
