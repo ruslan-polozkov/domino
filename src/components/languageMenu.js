@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react"
 import { useTranslation } from "react-i18next"
 
-import ruLogo from "images/dominoes/russia.png"
-import enLogo from "images/dominoes/usa.png"
+import ruLogo from "images/dominoes/ru.png"
+import enLogo from "images/dominoes/us.png"
 
 const LanguageMenu = props => {
   const { t, i18n } = useTranslation()
