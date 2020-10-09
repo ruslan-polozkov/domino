@@ -77,7 +77,7 @@ const Footer = () => {
                     <Link to="/types">{t("footer.footer-types-game")}</Link>
                   </li>
                   <li>
-                    <Link to="/strategy">
+                    <Link to="/strategiya-v-domino">
                       {t("footer.footer-strategy-game")}
                     </Link>
                   </li>
@@ -86,10 +86,10 @@ const Footer = () => {
               <div className="column_inner">
                 <ul>
                   <li>
-                    <Link to="/">{t("footer.footer-cookie")}</Link>
+                    <Link to="http://loppipoppi.com/privacy-policy" target="_blank">{t("footer.footer-privacy")}</Link>
                   </li>
                   <li>
-                    <Link to="/">{t("footer.footer-privacy")}</Link>
+                    <Link to="http://loppipoppi.com/terms-of-use" target="_blank">{t("footer.footer-terms")}</Link>
                   </li>
                 </ul>
               </div>

@@ -59,6 +59,10 @@
           a {
             font-size: 1.8rem;
             font-weight: 600;
+
+            &:hover {
+              text-decoration: underline;
+            }
           }
         }
       }
@@ -73,6 +77,10 @@
       justify-content: center;
       padding: 1.4rem;
     }
+  }
+
+  .slick-dots li button:before {
+    font-size: 10px;
   }
 }
 

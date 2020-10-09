@@ -18,6 +18,8 @@
       align-items: center;
 
       img {
+        border-radius: 2px;
+        overflow: hidden;
         max-width: 4rem;
         height: auto;
       }
@@ -44,7 +46,7 @@
     border: 1px solid transparent;
     border-top: none;
     border-radius: 0 0 3px 3px;
-    margin-bottom: -2.6rem;
+    margin-bottom: -3.8rem;
     min-width: 180px;
     z-index: 1;
     transition: 240ms;
@@ -94,10 +96,8 @@
   &.opened {
 
     .language_menu {
-      position: absolute;
-      bottom: 2.4rem;
-      left: 50%;
-      transform: translateX(-50%);
+      order: -1;
+      margin: 0;
 
       .menu_list {
         .menu_item {

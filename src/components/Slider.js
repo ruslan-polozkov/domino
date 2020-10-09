@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { Component, useEffect } from "react"
 import Slider from "react-slick"
 import { useTranslation } from "react-i18next"
 

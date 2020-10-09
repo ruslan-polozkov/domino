@@ -10,14 +10,16 @@ const Header = ({ siteTitle }) => {
   const [open, setOpen] = useState(false)
 
   const setOpenedHeaderState = () => {
+    setOpen(!open)
+  }
+
+  useEffect(() => {
     const header = document.querySelector(".header")
     const burger = document.querySelector(".header_burger")
 
-    setOpen(!open)
-
     open ? header.classList.add("opened") : header.classList.remove("opened")
     open ? burger.classList.add("open") : burger.classList.remove("open")
-  }
+  })
 
   useEffect(() => {
     const header = document.querySelector(".header")

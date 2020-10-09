@@ -42,6 +42,10 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
+          name: `apple-itunes-app`,
+          content: 'app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL'
+        },
+        {
           property: `og:title`,
           content: title,
         },

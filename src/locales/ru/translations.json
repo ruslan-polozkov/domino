@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "Домино",
+    "description": "Описание Димино"
+  },
   "site": {
     "Gatsby Default Starter": "Русский текст",
     "footer": "Русский текст Gatsby Русский текст"
@@ -20,7 +24,11 @@
     "header-about": "Об игре",
     "header-advantages": "Приемущества",
     "header-types": "Типы домино",
-    "header-strategy": "Стратегия игры"
+    "header-strategy": "Стратегия игры",
+    "header-types-domino-online": "Домино онлайн",
+    "header-types-domino-klassicheskoe": "Классическое домино",
+    "header-types-domino-5": "Пятёрки",
+    "header-types-domino-blok": "Домино блок"
   },
   "footer": {
     "footer-logo-desc": "Вы готовы? Скачайте приложение, чтобы начать играть прямо сейчас!",
@@ -28,7 +36,7 @@
     "footer-advantages-game": "Приемущества домино",
     "footer-types-game": "Типы домино",
     "footer-strategy-game": "Стратегия игры в домино",
-    "footer-cookie": "Куки",
+    "footer-terms": "Условия предоставления информации",
     "footer-privacy": "Политика конфиденциальности"
   },
   "about": {
@@ -41,7 +49,7 @@
   "banner": {
     "banner-title": "Как насчет игры в домино?"
   },
-  "strategy": {
+  "strategiya-v-domino": {
     "strategy-title": "Стратегия игры в домино",
     "strategy-text": "У каждого опытного игрока будет своя система, как выиграть в домино. И он будет свято верить в то, что это система одна из самых лучших. Однако, существует несколько правил или советов, следование которым делает вашу жизнь в игре значительно проще, а шансы на выигрыш увеличиваются.",
     "strategy-anchor": "Читать полностью"

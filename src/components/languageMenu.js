@@ -1,8 +1,8 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { useTranslation } from "react-i18next"
 
-import ruLogo from "images/dominoes/flag-rus.png"
-import enLogo from "images/dominoes/flag-gb.png"
+import ruLogo from "images/dominoes/russia.png"
+import enLogo from "images/dominoes/usa.png"
 
 const LanguageMenu = props => {
   const { t, i18n } = useTranslation()
@@ -20,6 +20,14 @@ const LanguageMenu = props => {
 
     setValues({ language: event.target.closest(".menu_item").dataset.value })
   }
+
+  useEffect(() => {
+    window.addEventListener('click', (event) => {
+      if (isOpen && !event.target.closest('.language_menu.open')) {
+        setIsOpen(!isOpen)
+      }
+    })
+  })
 
   return (
     <div

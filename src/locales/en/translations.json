@@ -1,6 +1,10 @@
 {
+  "meta": {
+    "title": "Title Dominoes",
+    "description": "Description Dominoes"
+  },
   "site": {
-    "Gatsby Default Starter": "Gatsby Default Starter LIVERPOOL",
+    "Gatsby Default Starter": "Gatsby Default Starter",
     "footer": "Built with Gatsby"
   },
   "home": {
@@ -20,7 +24,11 @@
     "header-about": "About",
     "header-advantages": "Advantages",
     "header-types": "Domino types",
-    "header-strategy": "Strategy game"
+    "header-strategy": "Strategy game",
+    "header-types-domino-online": "Domino online",
+    "header-types-domino-klassicheskoe": "Domino classic",
+    "header-types-domino-5": "Domino five",
+    "header-types-domino-blok": "Domino block"
   },
   "footer": {
     "footer-logo-desc": "You are ready? Download the app to start playing now!",
@@ -28,8 +36,8 @@
     "footer-advantages-game": "Domino advantages",
     "footer-types-game": "Domino types",
     "footer-strategy-game": "Domino strategy",
-    "footer-cookie": "Cookie policy",
-    "footer-privacy": "Privacy"
+    "footer-terms": "Terms of Use",
+    "footer-privacy": "Privacy Policy"
   },
   "about": {
     "about-title": "Dominoes",
@@ -41,7 +49,7 @@
   "banner": {
     "banner-title": "How about playing dominoes?"
   },
-  "strategy": {
+  "strategiya-v-domino": {
     "strategy-title": "Domino strategy",
     "strategy-text": "Each experienced player will have their own system of how to win at dominoes. And he will sacredly believe that this system is one of the best. However, there are a few rules or tips, following which makes your life in the game much easier, and the chances of winning increase.",
     "strategy-anchor": "Read completely",

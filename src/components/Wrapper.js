@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react"
-import { graphql, Link, useStaticQuery } from "gatsby"
+import React, { useState } from "react"
+import { Link } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import { useTranslation } from "react-i18next"
 import SliderMy from "./Slider"
@@ -61,6 +61,29 @@ const Wrapper = props => {
     })
 
     event.target.closest(".list_item").classList.add("active")
+  }
+
+  function highLight () {
+    const menuArr = document.querySelectorAll(".advantages .context_list .list_item")
+    const slideArr = document.querySelectorAll('.advantages .inner_slides .list_item')
+    const active = [...menuArr].find(item => item.classList.contains('active'))
+    const activeIndex = +active.getAttribute('data-advantages-item')
+    const nextElem = [...menuArr].find(item => (+item.getAttribute('data-advantages-item') - 1) === activeIndex)
+
+    slideArr.forEach(item => item.classList.remove('active'))
+
+    if (menuArr.length === +active.getAttribute('data-advantages-item')) {
+      menuArr[0].classList.add('active')
+      slideArr[0].classList.add('active')
+    } else {
+      nextElem.classList.add('active')
+      slideArr[activeIndex].classList.add('active')
+    }
+
+    active.classList.remove('active')
+  }
+  if (document.querySelector('.advantages') && window.innerWidth <= 721) {
+    setInterval(highLight, 5000)
   }
 
   return (
@@ -149,11 +172,11 @@ const Wrapper = props => {
             </div>
             <div className="inner_content">
               <h2 className="content_title">
-                <span>{t("strategy.strategy-title")}</span>
+                <span>{t("strategiya-v-domino.strategy-title")}</span>
               </h2>
-              <p className="content_text">{t("strategy.strategy-text")}</p>
+              <p className="content_text">{t("strategiya-v-domino.strategy-text")}</p>
               <div className="content_link">
-                <Link to="/strategy">{t("strategy.strategy-anchor")}</Link>
+                <Link to="/strategiya-v-domino">{t("strategiya-v-domino.strategy-anchor")}</Link>
               </div>
             </div>
           </div>
