@@ -82,7 +82,7 @@ const SliderMy = () => {
             </div>
             <div className="inner_text">{t("slider.slider_item_text_04")}</div>
             <div className="inner_link">
-              <Link to="/online-game-mode">{t("slider.slider_item_more")}</Link>
+              <Link to="/domino-online">{t("slider.slider_item_more")}</Link>
             </div>
           </div>
         </div>
