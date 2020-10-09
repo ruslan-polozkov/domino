@@ -84,7 +84,7 @@ const Wrapper = props => {
   }
 
   useEffect(() => {
-    if (window.querySelector('.advantages') && window.innerWidth <= 721) {
+    if (document.querySelector('.advantages') && window.innerWidth <= 721) {
       setInterval(highLight, 5000)
     }
   }, [])
