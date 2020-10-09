@@ -93,6 +93,10 @@
                   border-width: 0 10px 10px 10px;
                   border-color: transparent transparent #ccc transparent
                 }
+                &:after {
+                  top: .1rem;
+                  border-color: transparent transparent #191919 transparent
+                }
               }
 
               &.open {
@@ -292,6 +296,18 @@
     &.fixed {
       top: 0;
       transform: translateY(0);
+    }
+    &:not(.opened) {
+      .list_item.types {
+        .item_menu {
+          background-color: #fff !important;
+          color: #000 !important;
+
+          &:after {
+            border-color: transparent transparent #fff transparent !important;
+          }
+        }
+      }
     }
   }
 
