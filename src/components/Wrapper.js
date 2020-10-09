@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import { useTranslation } from "react-i18next"
@@ -82,9 +82,12 @@ const Wrapper = props => {
 
     active.classList.remove('active')
   }
-  if (window.querySelector('.advantages') && window.innerWidth <= 721) {
-    setInterval(highLight, 5000)
-  }
+
+  useEffect(() => {
+    if (window.querySelector('.advantages') && window.innerWidth <= 721) {
+      setInterval(highLight, 5000)
+    }
+  }, [])
 
   return (
     <div className="wrapper">
