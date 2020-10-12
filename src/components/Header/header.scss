@@ -320,6 +320,11 @@
     }
     &:not(.opened) {
       .list_item.types {
+        .item_title {
+          svg {
+            fill: #000000 !important;
+          }
+        }
         .item_menu {
           background-color: #fff !important;
           color: #000 !important;

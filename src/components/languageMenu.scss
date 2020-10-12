@@ -7,6 +7,7 @@
   min-width: 180px;
   padding: 0 1.2rem;
   border: 1px solid transparent;
+  border-bottom: none;
   border-radius: 3px 3px 0 0;
 
   .menu_active {
@@ -169,6 +170,13 @@
   &.active:not(.opened) {
    .language_menu {
      background-color: #fff;
+     .active_item {
+       span {
+         svg {
+           fill: #000 !important;
+         }
+       }
+     }
      .menu_list {
        background-color: #fff;
 
