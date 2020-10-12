@@ -42,7 +42,12 @@ const LanguageMenu = props => {
           }
         >
           <img src={enLogo} alt="EN" />
-          <span>English</span>
+          <span>
+            English
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.59 8.59003L12 13.17L7.41 8.59003L6 10L12 16L18 10L16.59 8.59003Z" fill="evenodd"></path>
+            </svg>
+          </span>
         </div>
         <div
           className={
@@ -50,12 +55,17 @@ const LanguageMenu = props => {
           }
         >
           <img src={ruLogo} alt="RU" />
-          <span>Русский</span>
+          <span>
+            Русский
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.59 8.59003L12 13.17L7.41 8.59003L6 10L12 16L18 10L16.59 8.59003Z" fill="evenodd"></path>
+            </svg>
+          </span>
         </div>
       </div>
       <div className="menu_list">
         <div
-          className="menu_item"
+          className={language.language === "ru" ? "menu_item" : "menu_item dnone"}
           data-value={"en"}
           onClick={e => handleChange(e)}
         >
@@ -63,7 +73,7 @@ const LanguageMenu = props => {
           <span>English</span>
         </div>
         <div
-          className="menu_item"
+          className={language.language === "en" ? "menu_item" : "menu_item dnone"}
           data-value={"ru"}
           onClick={e => handleChange(e)}
         >

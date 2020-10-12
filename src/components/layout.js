@@ -5,7 +5,8 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useEffect } from "react"
+import { Switch, Route, withRouter } from 'react-router-dom';
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { withTrans } from "../i18n/withTrans"
@@ -28,6 +29,9 @@ const Layout = ({ children, t, i18n }) => {
   `)
 
   const translatedTitle = t(`site.${data.site.siteMetadata.title}`)
+
+  console.log('useEffect')
+
   return (
     <>
       <Header siteTitle={translatedTitle} />

@@ -24,7 +24,9 @@
         height: auto;
       }
       span {
-        padding-top: .1rem;
+        display: flex;
+        align-items: center;
+        //padding-top: .1rem;
         margin-left: 1.2rem;
         font-size: 1.8rem;
         line-height: 2.4rem;
@@ -46,7 +48,6 @@
     border: 1px solid transparent;
     border-top: none;
     border-radius: 0 0 3px 3px;
-    margin-bottom: -5.4rem;
     min-width: 180px;
     z-index: 1;
     transition: 240ms;
@@ -65,7 +66,7 @@
         height: auto;
       }
       span {
-        padding-top: .1rem;
+        //padding-top: .1rem;
         margin-left: 1.2rem;
         font-size: 1.8rem;
         line-height: 2.4rem;
@@ -83,6 +84,16 @@
     border-bottom: none;
     background: rgba(0,0,0,.4);
 
+    .menu_active {
+      .active_item {
+        span {
+          svg {
+            transform: rotateZ(180deg);
+          }
+        }
+      }
+    }
+
     .menu_list {
       border-color: #ccc;
       transform: translateY(0);
@@ -94,42 +105,57 @@
 
 .header {
   &.opened {
-
     .language_menu {
       order: -1;
-      margin: 0;
 
-      .menu_list {
-        .menu_item {
-          span {
-            color: #fff !important;
-            font-size: 2.4rem;
-            line-height: 3rem;
+      .menu_active {
+        display: flex;
+        width: 100%;
+
+        .active_item {
+          width: 100%;
+          padding: .6rem 0;
+
+          img {
+            min-width: 36px;
           }
 
-          &:hover {
-            background-color: rgba(0, 0, 0, 0.8);
+          span {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
           }
         }
       }
-    }
-  }
 
-  &.opened {
-    .language_menu {
       .menu_list {
-        transform: translateY(-100%);
-        margin: 0;
-        top: 2px;
-        bottom: initial;
-        border-bottom: none;
-        border-radius: 3px 3px 0 0;
-        border-top: 1px solid #cccccc;
+        position: absolute;
+        top: 0 !important;
+        transform: translateY(100%) !important;
+        bottom: 0 !important;
+        border: none !important;
       }
-
-      &.open {
+      .menu_item {
+        padding: .6rem 1.2rem;
+        display: flex;
+        align-items: center;
+        border-radius: 0 0 3px 3px;
+        border: 1px solid #cccccc;
         border-top: none;
-        border-bottom: 1px solid #ccc;
+        background: #000;
+
+        span {
+          color: #fff !important;
+          font-size: 2.4rem;
+          line-height: 3rem;
+        }
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+      }
+      &.open {
+        background-color: #000;
       }
     }
     .active_item span {

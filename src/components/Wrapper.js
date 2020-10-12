@@ -72,6 +72,8 @@ const Wrapper = props => {
 
     slideArr.forEach(item => item.classList.remove('active'))
 
+    if (menuArr.length === 15) return;
+
     if (menuArr.length === +active.getAttribute('data-advantages-item')) {
       menuArr[0].classList.add('active')
       slideArr[0].classList.add('active')
@@ -84,10 +86,10 @@ const Wrapper = props => {
   }
 
   useEffect(() => {
-    if (document.querySelector('.advantages') && window.innerWidth >= 721) {
+    if (props.path === '/' && window.innerWidth >= 721) {
       setInterval(highLight, 5000)
     }
-  }, [])
+  }, [props.path])
 
   return (
     <div className="wrapper">

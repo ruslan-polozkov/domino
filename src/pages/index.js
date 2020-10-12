@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 import { useTranslation } from "react-i18next"
 import { useStaticQuery, graphql } from "gatsby"
 
-const IndexPage = () => {
+const IndexPage = ({ path, children }) => {
   const { t } = useTranslation()
   const data = useStaticQuery(graphql`
     query {
@@ -19,6 +19,8 @@ const IndexPage = () => {
       }
     }
   `)
+
+  data.path = path
 
   return (
     <Layout>

@@ -16,9 +16,16 @@ const Header = ({ siteTitle }) => {
   useEffect(() => {
     const header = document.querySelector(".header")
     const burger = document.querySelector(".header_burger")
+    const toUp = document.querySelector('.up-container')
 
     open ? header.classList.add("opened") : header.classList.remove("opened")
     open ? burger.classList.add("open") : burger.classList.remove("open")
+
+    if (toUp && open) {
+      toUp.classList.add('dnone')
+    } else {
+      toUp.classList.remove('dnone')
+    }
   })
 
   useEffect(() => {
