@@ -5,8 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { useEffect } from "react"
-import { Switch, Route, withRouter } from 'react-router-dom';
+import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { withTrans } from "../i18n/withTrans"

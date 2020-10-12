@@ -2,8 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
-import Img from "gatsby-image"
-
+import { useIntl } from "gatsby-plugin-intl"
 import { useTranslation } from "react-i18next"
 import Logo from "../Logo/Logo"
 import "./footer.scss"
@@ -12,6 +11,7 @@ import apple from "images/dominoes/logo-app-store.png"
 import google from "images/dominoes/logo-gplay.png"
 
 const Footer = () => {
+  const intl = useIntl()
   const { t } = useTranslation()
   const data = useStaticQuery(graphql`
     query {
@@ -24,14 +24,7 @@ const Footer = () => {
       }
     }
   `)
-  // apple: file(relativePath: { eq: "dominoes/logo-app-store.png" }) {
-  //   id
-  //   childImageSharp {
-  //     fixed {
-  //     ...GatsbyImageSharpFixed
-  //     }
-  //   }
-  // }
+
   return (
     <BackgroundImage fluid={data.desktop.childImageSharp.fluid}>
       <footer className="footer">
@@ -43,7 +36,7 @@ const Footer = () => {
                 <div className="inner_logo">
                   <Logo />
                 </div>
-                <div className="inner_desc">{t("footer.footer-logo-desc")}</div>
+                <div className="inner_desc">{intl.formatMessage({id: 'footer.footer-logo-desc'})}</div>
               </div>
             </div>
             <div className="inner_column btns">
@@ -66,28 +59,28 @@ const Footer = () => {
               <div className="column_inner">
                 <ul>
                   <li>
-                    <Link to="/istoriya-domino">{t("footer.footer-about-game")}</Link>
+                    <Link to={'/' + "istoriya-domino"}>{intl.formatMessage({id: 'footer.footer-about-game'})}</Link>
                   </li>
                   <li>
-                    <Link to="/advantages">
-                      {t("footer.footer-advantages-game")}
+                    <Link to={'/' + "advantages"}>
+                      {intl.formatMessage({id: 'footer.footer-advantages-game'})}
                     </Link>
                   </li>
                   <li>
-                    <Link to="/domino-online">{t("header.header-types-domino-online")}</Link>
+                    <Link to={'/' + "domino-online"}>{intl.formatMessage({id: 'footer.footer-advantages-game'})}</Link>
                   </li>
                   <li>
-                    <Link to="/domino-klassicheskoe">{t("header.header-types-domino-klassicheskoe")}</Link>
+                    <Link to={'/' + "domino-klassicheskoe"}>{intl.formatMessage({id: 'header.header-types-domino-klassicheskoe'})}</Link>
                   </li>
                   <li>
-                    <Link to="/domino-5">{t("header.header-types-domino-5")}</Link>
+                    <Link to={'/' + "domino-5"}>{intl.formatMessage({id: 'header.header-types-domino-5'})}</Link>
                   </li>
                   <li>
-                    <Link to="/domino-blok">{t("header.header-types-domino-blok")}</Link>
+                    <Link to={'/' + "domino-blok"}>{intl.formatMessage({id: 'header.header-types-domino-blok'})}</Link>
                   </li>
                   <li>
-                    <Link to="/strategiya-v-domino">
-                      {t("footer.footer-strategy-game")}
+                    <Link to={'/' + "strategiya-v-domino"}>
+                      {intl.formatMessage({id: 'footer.footer-strategy-game'})}
                     </Link>
                   </li>
                 </ul>
@@ -95,10 +88,10 @@ const Footer = () => {
               <div className="column_inner">
                 <ul>
                   <li>
-                    <Link to="http://loppipoppi.com/privacy-policy" target="_blank">{t("footer.footer-privacy")}</Link>
+                    <Link to="http://loppipoppi.com/privacy-policy" target="_blank">Privacy Policy</Link>
                   </li>
                   <li>
-                    <Link to="http://loppipoppi.com/terms-of-use" target="_blank">{t("footer.footer-terms")}</Link>
+                    <Link to="http://loppipoppi.com/terms-of-use" target="_blank">Terms of Use</Link>
                   </li>
                 </ul>
               </div>
