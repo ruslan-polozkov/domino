@@ -44,12 +44,12 @@ const Footer = () => {
               <div className="column_inner">
                 <div className="inner_img">
                   <div className="img img_apple">
-                    <Link to="https://apps.apple.com/us/app/dominoes-classic-edition/id1434957889" target="_blank">
+                    <Link to="https://apps.apple.com/us/app/dominoes-board-game/id1492160489" target="_blank">
                       <img src={apple} alt="Dominoes" />
                     </Link>
                   </div>
                   <div className="img img_google">
-                    <Link to="https://play.google.com/store/apps/details?id=com.LoopGames.Domino&hl=en_US&gl=US" target="_blank">
+                    <Link to="https://play.google.com/store/apps/details?id=loppipoppi.dominoes&hl=en" target="_blank">
                       <img src={google} alt="Dominoes" />
                     </Link>
                   </div>
