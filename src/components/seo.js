@@ -46,6 +46,10 @@ function SEO({ description, lang, meta, title }) {
           content: 'app-id=1434957889, affiliate-data=myAffiliateData, app-argument=dominoes.com'
         },
         {
+          name: `google-play-app`,
+          content: 'app-id=loppipoppi.dominoes&hl=en, affiliate-data=myAffiliateData, app-argument=dominoes.com'
+        },
+        {
           property: `og:title`,
           content: title,
         },
