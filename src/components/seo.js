@@ -43,7 +43,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `apple-itunes-app`,
-          content: 'app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL'
+          content: 'app-id=1434957889, affiliate-data=myAffiliateData, app-argument=dominoes.com'
         },
         {
           property: `og:title`,
