@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import BackgroundImage from "gatsby-background-image"
 import { useTranslation } from "react-i18next"
 import { graphql, useStaticQuery } from "gatsby"
@@ -12,7 +12,6 @@ import history from "images/dominoes/second-pages/history-of-dominoes.jpg"
 import strategy from "images/dominoes/second-pages/strategiya-v-domino.jpg"
 
 const Wrapper = path => {
-  debugger
   let heroImage;
   // const intl = useIntl()
   // console.log('wrapper second intl', intl)
@@ -44,6 +43,11 @@ const Wrapper = path => {
   } else {
     heroImage = blockDominoes;
   }
+
+  // useEffect(() => {
+  //   let htmlText = JSON.stringify(t(`${pathRoute}.content_text`))
+  //   document.querySelector('.content_test').append(htmlText);
+  // })
 
   return (
     <div className="wrapper">

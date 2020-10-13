@@ -85,8 +85,8 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      to={i18n.language === "ru" ? "/domino-blok" : "/blocks-dominoes"}>
-                      {t("header.header-types-domino-blok")}
+                      to={i18n.language === "ru" ? "/domino-bloc" : "/blocks-dominoes"}>
+                      {t("header.header-types-domino-bloc")}
                     </Link>
                   </li>
 

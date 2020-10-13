@@ -69,14 +69,15 @@ const Wrapper = props => {
 
   function highLight () {
     const menuArr = document.querySelectorAll(".advantages .context_list .list_item")
+
+    if (!menuArr.length || menuArr.length === 15) return;
+
     const slideArr = document.querySelectorAll('.advantages .inner_slides .list_item')
     const active = [...menuArr].find(item => item.classList.contains('active'))
     const activeIndex = +active.getAttribute('data-advantages-item')
     const nextElem = [...menuArr].find(item => (+item.getAttribute('data-advantages-item') - 1) === activeIndex)
 
     slideArr.forEach(item => item.classList.remove('active'))
-
-    if (!menuArr.length || menuArr.length === 15) return;
 
     if (menuArr.length === +active.getAttribute('data-advantages-item')) {
       menuArr[0].classList.add('active')
