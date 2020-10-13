@@ -7,7 +7,7 @@ import { Link } from "gatsby"
 
 const SliderMy = () => {
   const { t } = useTranslation()
-  const intl = useIntl()
+  // const intl = useIntl()
   const settings = {
     dots: true,
     infinite: true,
@@ -47,44 +47,44 @@ const SliderMy = () => {
         <div className="slider_item">
           <div className="item_inner">
             <div className="inner_title">
-              {intl.formatMessage({id: 'slider.slider_item_title_01'})}
+              {t("slider.slider_item_title_01")}
             </div>
-            <div className="inner_text">{intl.formatMessage({id: 'slider.slider_item_text_01'})}</div>
+            <div className="inner_text">{t("slider.slider_item_text_01")}</div>
             <div className="inner_link">
-              <Link to={'/' + "dyenesh-blocks"} target="_blank">{intl.formatMessage({id: 'slider.slider_item_more'})}</Link>
+              <Link to={"/domino-bloc"} target="_blank">{t("slider.slider_item_more")}</Link>
             </div>
           </div>
         </div>
         <div className="slider_item dark">
           <div className="item_inner">
             <div className="inner_title">
-              {intl.formatMessage({id: 'slider.slider_item_title_02'})}
+              {t("slider.slider_item_title_02")}
             </div>
-            <div className="inner_text">{intl.formatMessage({id: 'slider.slider_item_text_02'})}</div>
+            <div className="inner_text">{t("slider.slider_item_text_02")}</div>
             <div className="inner_link">
-              <Link to={'/' + "classic-game"}>{intl.formatMessage({id: 'slider.slider_item_more'})}</Link>
+              <Link to="/dominoes-rules">{t("slider.slider_item_more")}</Link>
             </div>
           </div>
         </div>
         <div className="slider_item">
           <div className="item_inner">
             <div className="inner_title">
-              {intl.formatMessage({id: 'slider.slider_item_title_03'})}
+              {t("slider.slider_item_title_03")}
             </div>
-            <div className="inner_text">{intl.formatMessage({id: 'slider.slider_item_text_03'})}</div>
+            <div className="inner_text">{t("slider.slider_item_text_03")}</div>
             <div className="inner_link">
-              <Link to={'/' + "domino-5"}>{intl.formatMessage({id: 'slider.slider_item_more'})}</Link>
+              <Link to="/domino-5">{t("slider.slider_item_more")}</Link>
             </div>
           </div>
         </div>
         <div className="slider_item dark">
           <div className="item_inner">
             <div className="inner_title">
-              {intl.formatMessage({id: 'slider.slider_item_title_04'})}
+              {t("slider.slider_item_title_04")}
             </div>
-            <div className="inner_text">{intl.formatMessage({id: 'slider.slider_item_text_04'})}</div>
+            <div className="inner_text">{t("slider.slider_item_text_04")}</div>
             <div className="inner_link">
-              <Link to={'/' + "domino-online"}>{intl.formatMessage({id: 'slider.slider_item_more'})}</Link>
+              <Link to="/domino-online">{t("slider.slider_item_more")}</Link>
             </div>
           </div>
         </div>

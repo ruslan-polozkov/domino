@@ -1,13 +1,13 @@
 import i18next from "i18next"
 
 i18next.init({
-  fallbackLng: "ru",
+  fallbackLng: "en",
   resources: {
     ru: {
-      translations: require("../locales/ru.json"),
+      translations: require("../locales/ru/ru.json"),
     },
     en: {
-      translations: require("../locales/en.json"),
+      translations: require("../locales/en/en.json"),
     },
   },
   ns: ["translations"],

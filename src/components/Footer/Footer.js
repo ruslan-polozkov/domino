@@ -11,7 +11,7 @@ import apple from "images/dominoes/logo-app-store.png"
 import google from "images/dominoes/logo-gplay.png"
 
 const Footer = () => {
-  const intl = useIntl()
+  // const intl = useIntl()
   const { t } = useTranslation()
   const data = useStaticQuery(graphql`
     query {
@@ -36,7 +36,7 @@ const Footer = () => {
                 <div className="inner_logo">
                   <Logo />
                 </div>
-                <div className="inner_desc">{intl.formatMessage({id: 'footer.footer-logo-desc'})}</div>
+                <div className="inner_desc">{t("footer.footer-logo-desc")}</div>
               </div>
             </div>
             <div className="inner_column btns">
@@ -59,28 +59,31 @@ const Footer = () => {
               <div className="column_inner">
                 <ul>
                   <li>
-                    <Link to={'/' + "istoriya-domino"}>{intl.formatMessage({id: 'footer.footer-about-game'})}</Link>
+                    <Link to="/istoriya-domino">{t("footer.footer-about-game")}</Link>
                   </li>
                   <li>
-                    <Link to={'/' + "advantages"}>
-                      {intl.formatMessage({id: 'footer.footer-advantages-game'})}
+                    <Link to="/advantages">
+                      {t("footer.footer-advantages-game")}
                     </Link>
                   </li>
+
+
                   <li>
-                    <Link to={'/' + "domino-online"}>{intl.formatMessage({id: 'footer.footer-advantages-game'})}</Link>
+                    <Link to="/domino-online">{t("header.header-types-domino-online")}</Link>
                   </li>
                   <li>
-                    <Link to={'/' + "domino-klassicheskoe"}>{intl.formatMessage({id: 'header.header-types-domino-klassicheskoe'})}</Link>
+                    <Link to="/domino-klassicheskoe">{t("header.header-types-domino-klassicheskoe")}</Link>
                   </li>
                   <li>
-                    <Link to={'/' + "domino-5"}>{intl.formatMessage({id: 'header.header-types-domino-5'})}</Link>
+                    <Link to="/domino-5">{t("header.header-types-domino-5")}</Link>
                   </li>
                   <li>
-                    <Link to={'/' + "domino-blok"}>{intl.formatMessage({id: 'header.header-types-domino-blok'})}</Link>
+                    <Link to="/domino-blok">{t("header.header-types-domino-blok")}</Link>
                   </li>
+
                   <li>
-                    <Link to={'/' + "strategiya-v-domino"}>
-                      {intl.formatMessage({id: 'footer.footer-strategy-game'})}
+                    <Link to="/strategiya-v-domino">
+                      {t("footer.footer-strategy-game")}
                     </Link>
                   </li>
                 </ul>

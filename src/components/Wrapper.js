@@ -19,7 +19,7 @@ import advantage04 from "images/dominoes/advantage-4.jpg"
 import arrowRight from "images/dominoes/right-arrow.png"
 
 const Wrapper = props => {
-  const intl = useIntl()
+  const { t } = useTranslation()
   const [accordionState, accordionSetState] = useState("01")
   const settingsSlider = {
     speed: 500,
@@ -75,7 +75,7 @@ const Wrapper = props => {
 
     slideArr.forEach(item => item.classList.remove('active'))
 
-    if (menuArr.length === 15) return;
+    if (!menuArr.length || menuArr.length === 15) return;
 
     if (menuArr.length === +active.getAttribute('data-advantages-item')) {
       menuArr[0].classList.add('active')
@@ -102,8 +102,8 @@ const Wrapper = props => {
           <div className="global-container">
             <div className="hero_inner">
               <div className="inner_content">
-                <h1 className="content_title">{intl.formatMessage({id: 'home.hero-title'})}</h1>
-                <p className="content_text">{intl.formatMessage({id: 'home.hero-text'})}</p>
+                <h1 className="content_title">{t("home.hero-title")}</h1>
+                <p className="content_text">{t("home.hero-text")}</p>
                 <div className="content_img">
                   <div className="img img_apple">
                     <Link to="https://apps.apple.com/us/app/dominoes-classic-edition/id1434957889" target="_blank">
@@ -132,13 +132,11 @@ const Wrapper = props => {
             </div>
             <div className="inner_content">
               <h2 className="content_title">
-                <span>{intl.formatMessage({id: 'istoriya-domino.about-title'})}</span>
+                <span>{t("istoriya-domino.about-title")}</span>
               </h2>
-              <p className="content_text">{intl.formatMessage({id: 'istoriya-domino.about-text'})}</p>
+              <p className="content_text">{t("istoriya-domino.about-text")}</p>
               <div className="content_link">
-                <Link to={"/istoriya-domino"}>
-                  {intl.formatMessage({id: 'istoriya-domino.about-anchor'})}
-                </Link>
+                <Link to="/istoriya-domino">{t("istoriya-domino.about-anchor")}</Link>
                 <img src={arrowRight} alt="Dominoes" />
               </div>
             </div>
@@ -150,7 +148,7 @@ const Wrapper = props => {
           <div className="shadow"></div>
           <div className="global-container">
             <div className="banner_inner">
-              <div className="inner_title">{intl.formatMessage({id: 'banner.banner-title'})}</div>
+              <div className="inner_title">{t("banner.banner-title")}</div>
               <div className="inner_img">
                 <div className="img img_apple">
                   <Link to="https://apps.apple.com/us/app/dominoes-classic-edition/id1434957889" target="_blank">
@@ -183,13 +181,11 @@ const Wrapper = props => {
             </div>
             <div className="inner_content">
               <h2 className="content_title">
-                <span>{intl.formatMessage({id: 'strategiya-v-domino.strategy-title'})}</span>
+                <span>{t("strategiya-v-domino.strategy-title")}</span>
               </h2>
-              <p className="content_text">{intl.formatMessage({id: 'strategiya-v-domino.strategy-title'})}</p>
+              <p className="content_text">{t("strategiya-v-domino.strategy-text")}</p>
               <div className="content_link">
-                <Link to={'/' + "strategiya-v-domino"}>
-                  {intl.formatMessage({id: 'strategiya-v-domino.strategy-anchor'})}
-                </Link>
+                <Link to="/strategiya-v-domino">{t("strategiya-v-domino.strategy-anchor")}</Link>
                 <img src={arrowRight} alt="Dominoes" />
               </div>
             </div>
@@ -201,9 +197,9 @@ const Wrapper = props => {
           <div className="advantages_inner">
             <div className="inner_context">
               <div className="context_title">
-                <span>{intl.formatMessage({id: 'advantages.context_title'})}</span>
+                <span>{t("advantages.context_title")}</span>
               </div>
-              <div className="context_text">{intl.formatMessage({id: 'advantages.context_text'})}</div>
+              <div className="context_text">{t("advantages.context_text")}</div>
               <ul className="context_list slick-center-wrap">
                 <Slider {...settingsSlider}>
                   <li
@@ -214,10 +210,10 @@ const Wrapper = props => {
                     <img
                       className="item_pic"
                       src={advantage01}
-                      alt={intl.formatMessage({id: 'advantages.context_list_item_txt_01'})}
+                      alt={t("advantages.context_list_item_txt_01")}
                     />
                     <span className="item_txt">
-                      {intl.formatMessage({id: 'advantages.context_list_item_txt_01'})}
+                      {t("advantages.context_list_item_txt_01")}
                     </span>
                   </li>
                   <li
@@ -228,10 +224,10 @@ const Wrapper = props => {
                     <img
                       className="item_pic"
                       src={advantage02}
-                      alt={intl.formatMessage({id: 'advantages.context_list_item_txt_02'})}
+                      alt={t("advantages.context_list_item_txt_02")}
                     />
                     <span className="item_txt">
-                      {intl.formatMessage({id: 'advantages.context_list_item_txt_02'})}
+                      {t("advantages.context_list_item_txt_02")}
                     </span>
                   </li>
                   <li
@@ -242,10 +238,10 @@ const Wrapper = props => {
                     <img
                       className="item_pic"
                       src={advantage03}
-                      alt={intl.formatMessage({id: 'advantages.context_list_item_txt_03'})}
+                      alt={t("advantages.context_list_item_txt_03")}
                     />
                     <span className="item_txt">
-                      {intl.formatMessage({id: 'advantages.context_list_item_txt_03'})}
+                      {t("advantages.context_list_item_txt_03")}
                     </span>
                   </li>
                   <li
@@ -256,10 +252,10 @@ const Wrapper = props => {
                     <img
                       className="item_pic"
                       src={advantage04}
-                      alt={intl.formatMessage({id: 'advantages.context_list_item_txt_04'})}
+                      alt={t("advantages.context_list_item_txt_04")}
                     />
                     <span className="item_txt">
-                      {intl.formatMessage({id: 'advantages.context_list_item_txt_04'})}
+                      {t("advantages.context_list_item_txt_04")}
                     </span>
                   </li>
                   <li
@@ -270,10 +266,10 @@ const Wrapper = props => {
                     <img
                       className="item_pic"
                       src={advantage01}
-                      alt={intl.formatMessage({id: 'advantages.context_list_item_txt_05'})}
+                      alt={t("advantages.context_list_item_txt_05")}
                     />
                     <span className="item_txt">
-                      {intl.formatMessage({id: 'advantages.context_list_item_txt_05'})}
+                      {t("advantages.context_list_item_txt_05")}
                     </span>
                   </li>
                 </Slider>
@@ -285,31 +281,31 @@ const Wrapper = props => {
                 <li className="list_item active" data-slider-item="01">
                   <img
                     src={advantage01}
-                    alt={intl.formatMessage({id: 'advantages.context_list_item_txt_01'})}
+                    alt={t("advantages.context_list_item_txt_01")}
                   />
                 </li>
                 <li className="list_item" data-slider-item="02">
                   <img
                     src={advantage02}
-                    alt={intl.formatMessage({id: 'advantages.context_list_item_txt_02'})}
+                    alt={t("advantages.context_list_item_txt_02")}
                   />
                 </li>
                 <li className="list_item" data-slider-item="03">
                   <img
                     src={advantage03}
-                    alt={intl.formatMessage({id: 'advantages.context_list_item_txt_03'})}
+                    alt={t("advantages.context_list_item_txt_03")}
                   />
                 </li>
                 <li className="list_item" data-slider-item="04">
                   <img
                     src={advantage04}
-                    alt={intl.formatMessage({id: 'advantages.context_list_item_txt_04'})}
+                    alt={t("advantages.context_list_item_txt_04")}
                   />
                 </li>
                 <li className="list_item" data-slider-item="05">
                   <img
                     src={advantage01}
-                    alt={intl.formatMessage({id: 'advantages.context_list_item_txt_05'})}
+                    alt={t("advantages.context_list_item_txt_05")}
                   />
                 </li>
               </ul>

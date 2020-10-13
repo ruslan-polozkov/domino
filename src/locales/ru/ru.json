@@ -43,7 +43,7 @@
     "about-title": "Об игре домино",
     "about-text": "Эта игра не только развивает математические навыки, но и развивает аналитические качества в человеке. Поэтому не важно, где и в какой вид домино вы будете играть. Главное – это получать от процесса неподдельное удовольствие.",
     "about-anchor": "Узнать больше о домино",
-    "content_title": "About какой то тайтл",
+    "content_title": "История игры домино",
     "content_text": "Online Dominoes \nWhere to play dominoes for free when there is no opportunity to get together at home with your friends? The answer to this question seems difficult only at first glance, since you can play dominoes without registration, additional SMS checks and other complicated actions on our website.\nThis is convenient enough as you can play your favorite game from anywhere in the world. If we are talking about online dominoes, then it will require the Internet access only and your smartphone, computer, laptop or tablet, where the application will be installed or the website launched in the browser. There is also an opportunity to play not with real people, but with computers that imitate players of varying degrees of training: from beginners to experts who calculate, like experienced chess players, all your moves in advance.\nOur site allows you to play dominoes online without registration, i.e. this is not required for the gameplay. However, if you want to save your progress and statistics, we recommend that you go through a simple registration procedure. It won’t take you more than one minute. It is enough to enter basic data, and you get to the club.\nWhen playing dominoes online, the rules of the board game, beloved by millions, do not differ from the classic ones, according to which you play at tables at home or on the street. You can choose any game format that you like best, where everyone plays for himself, or the classic, when the battle for victory is fought in teams, each of which consists of two people.\nAnd, of course, playing dominoes on the Internet is an opportunity to practice and learn the basic rules of playing “dices.” This is a good springboard and preparation for a fun and successful meeting with friends at the same table. You will be an experienced and trained player who will surprise everyone with your skills and non-standard moves when playing dominoes!\n"
   },
   "banner": {
@@ -52,7 +52,8 @@
   "strategiya-v-domino": {
     "strategy-title": "Стратегия игры в домино",
     "strategy-text": "У каждого опытного игрока будет своя система, как выиграть в домино. И он будет свято верить в то, что это система одна из самых лучших. Однако, существует несколько правил или советов, следование которым делает вашу жизнь в игре значительно проще, а шансы на выигрыш увеличиваются.",
-    "strategy-anchor": "Читать полностью"
+    "strategy-anchor": "Читать полностью",
+    "content_title": "Стратегия игры в домино"
   },
   "slider": {
     "slider_item_title_01": "Блоки Дьенеша",
@@ -76,8 +77,20 @@
     "context_list_item_txt_04": "Настройка дизайна досок и плиток домино!",
     "context_list_item_txt_05": "Возможность играть с друзьями или случайными соперниками!"
   },
-  "dyenesh": {
-    "content_title": "Блоки Дьенеша",
+  "domino-online": {
+    "content_title": "Онлайн домино",
+    "content_text": "нужен текст"
+  },
+  "domino-klassicheskoe": {
+    "content_title": "Правила игры в классическое домино",
+    "content_text": "нужен текст"
+  },
+  "domino-5": {
+    "content_title": "Домино пятёрка",
+    "content_text": "нужен текст"
+  },
+  "domino-blok": {
+    "content_title": "Игра Блоки Дьенеша",
     "content_text": "Развивающая игра Блоки Дьенеша – это отличный способ, чтобы занять своего ребёнка, увлекая действительно интересным и развивающим действом. Компьютерные игры с блоками Дьенеша интересны тем, что в комплекте нет ни одного полностью"
   }
 }

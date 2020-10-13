@@ -14,11 +14,11 @@ import strategy from "images/dominoes/second-pages/strategiya-v-domino.jpg"
 const Wrapper = path => {
   debugger
   let heroImage;
-  const intl = useIntl()
-  console.log('wrapper second intl', intl)
+  // const intl = useIntl()
+  // console.log('wrapper second intl', intl)
   const { t } = useTranslation()
-  // const pathRoute = path.props ? path.props.replace(/\//g, '') : path.replace(/\//g, '');
-  const pathRoute = path.props.replace(`/${intl.locale}/`, '').replace(/\//g, '')
+  const pathRoute = path.props ? path.props.replace(/\//g, '') : path.replace(/\//g, '');
+  // const pathRoute = path.props.replace(`/${intl.locale}/`, '').replace(/\//g, '')
   const data = useStaticQuery(graphql`
     query {
       desktop: file(relativePath: { eq: "dominoes/main-bg.jpg" }) {
@@ -52,12 +52,12 @@ const Wrapper = path => {
           <div className="global-container">
             <div className="main_content">
               <div className="content_title">
-                <h2>{intl.formatMessage({id: `${pathRoute}.content_title`})}</h2>
+                <h2>{t(`${pathRoute}.content_title`)}</h2>
               </div>
               <div className="content_img">
                 <img src={heroImage} alt="Dominoes" />
               </div>
-              <div className="content_text">{intl.formatMessage({id: `${pathRoute}.content_text`})}</div>
+              <div className="content_text">{t(`${pathRoute}.content_text`)}</div>
             </div>
           </div>
         </article>

@@ -40,18 +40,18 @@ module.exports = {
         images: path.join(__dirname, "src/images"),
       },
     },
-    {
-      resolve: `gatsby-plugin-intl`,
-      options: {
-        // language JSON resource path
-        path: `${__dirname}/src/locales`,
-        // supported language
-        languages: [`en`, `ru`],
-        defaultLanguage: `en`,
-        // option to redirect to `/ko` when connecting `/`
-        redirect: true,
-      }
-    }
+    // {
+    //   resolve: `gatsby-plugin-intl`,
+    //   options: {
+    //     // language JSON resource path
+    //     path: `${__dirname}/src/locales`,
+    //     // supported language
+    //     languages: [`en`, `ru`],
+    //     defaultLanguage: `en`,
+    //     // option to redirect to `/ko` when connecting `/`
+    //     redirect: true,
+    //   }
+    // }
     // {
     //   resolve: `gatsby-plugin-layout`,
     //   options: {

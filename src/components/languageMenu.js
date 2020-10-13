@@ -6,12 +6,12 @@ import ruLogo from "images/dominoes/ru.png"
 import enLogo from "images/dominoes/us.png"
 
 const LanguageMenu = props => {
-  const intl = useIntl()
+  // const intl = useIntl()
   const { t, i18n } = useTranslation()
   const currentPathName = window.location.pathname;
 
   const [language, setValues] = useState({
-    language: "ru",
+    language: "en",
   })
 
   const [isOpen, setIsOpen] = useState(false)
@@ -19,8 +19,6 @@ const LanguageMenu = props => {
   const toggleOpen = () => setIsOpen(!isOpen)
 
   function handleChange(event) {
-    console.log('intl')
-    debugger
     i18n.changeLanguage(event.target.closest(".menu_item").dataset.value)
 
     setValues({ language: event.target.closest(".menu_item").dataset.value })
@@ -69,26 +67,22 @@ const LanguageMenu = props => {
         </div>
       </div>
       <div className="menu_list">
-        <Link
+        <div
           className={language.language === "ru" ? "menu_item" : "menu_item dnone"}
           data-value={"en"}
           onClick={e => handleChange(e)}
-          to={'/en'}
-          // to={window.location.href.replace('en', 'ru')}
         >
           <img src={enLogo} alt="EN" />
           <span>English</span>
-        </Link>
-        <Link
+        </div>
+        <div
           className={language.language === "en" ? "menu_item" : "menu_item dnone"}
           data-value={"ru"}
           onClick={e => handleChange(e)}
-          to={'/ru'}
-          // to={window.location.href.replace('ru', 'en')}
         >
           <img src={ruLogo} alt="RU" />
           <span>Русский</span>
-        </Link>
+        </div>
       </div>
     </div>
   )

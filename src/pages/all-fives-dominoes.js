@@ -10,7 +10,7 @@ const SecondPage = ({ path, children }) => {
 
   return (
     <Layout>
-      <SEO title="История игры домино" />
+      <SEO title="Domino Five" />
       <WrapperSecond props={path} />
     </Layout>
   )
