@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import { useIntl } from "gatsby-plugin-intl"
+import i18n from "./../../i18n/config";
 import { useTranslation } from "react-i18next"
 import Logo from "../Logo/Logo"
 import "./footer.scss"
@@ -59,30 +60,39 @@ const Footer = () => {
               <div className="column_inner">
                 <ul>
                   <li>
-                    <Link to="/istoriya-domino">{t("footer.footer-about-game")}</Link>
+                    <Link
+                      to={i18n.language === "ru" ? "/istoriya-domino" : "/history-of-dominoes"}>
+                      {t("footer.footer-about-game")}
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/advantages">
-                      {t("footer.footer-advantages-game")}
+                    <Link
+                      to={i18n.language === "ru" ? "/domino-online" : "/dominoes-online"}>
+                      {t("header.header-types-domino-online")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to={i18n.language === "ru" ? "/domino-klassicheskoe" : "/dominoes-rules"}>
+                      {t("header.header-types-domino-klassicheskoe")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to={i18n.language === "ru" ? "/domino-5" : "/all-fives-dominoes"}>
+                      {t("header.header-types-domino-5")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to={i18n.language === "ru" ? "/domino-blok" : "/blocks-dominoes"}>
+                      {t("header.header-types-domino-blok")}
                     </Link>
                   </li>
 
-
                   <li>
-                    <Link to="/domino-online">{t("header.header-types-domino-online")}</Link>
-                  </li>
-                  <li>
-                    <Link to="/domino-klassicheskoe">{t("header.header-types-domino-klassicheskoe")}</Link>
-                  </li>
-                  <li>
-                    <Link to="/domino-5">{t("header.header-types-domino-5")}</Link>
-                  </li>
-                  <li>
-                    <Link to="/domino-blok">{t("header.header-types-domino-blok")}</Link>
-                  </li>
-
-                  <li>
-                    <Link to="/strategiya-v-domino">
+                    <Link
+                      to={i18n.language === "ru" ? "/strategiya-v-domino" : "/how-to-play-dominoes"}>
                       {t("footer.footer-strategy-game")}
                     </Link>
                   </li>

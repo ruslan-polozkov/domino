@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import { useTranslation } from "react-i18next"
 import LanguageMenu from "./languageMenu"
+import i18n from "./../i18n/config";
 
 const Navigation = () => {
   const { t } = useTranslation()
@@ -16,7 +17,9 @@ const Navigation = () => {
       <nav className="menu_nav">
         <ul className="nav_list">
           <li className="list_item">
-            <Link to="/istoriya-domino">{t("header.header-about")}</Link>
+            <Link
+              to={i18n.language === "ru" ? "/istoriya-domino" : "/history-of-dominoes"}>{t("header.header-about")}
+            </Link>
           </li>
           <li
             onMouseOver={(event) => setOpenMenu(true)}
@@ -29,21 +32,34 @@ const Navigation = () => {
             </span>
             <div className="item_menu">
               <div className="menu_item">
-                <Link to="/domino-online">{t("header.header-types-domino-online")}</Link>
+                <Link
+                  to={i18n.language === 'ru' ? "/domino-online" : "/dominoes-online"}>
+                  {t("header.header-types-domino-online")}
+                </Link>
               </div>
               <div className="menu_item">
-                <Link to="/domino-klassicheskoe">{t("header.header-types-domino-klassicheskoe")}</Link>
+                <Link
+                  to={i18n.language === 'ru' ? "/domino-klassicheskoe" : "/dominoes-rules"}>
+                  {t("header.header-types-domino-klassicheskoe")}
+                </Link>
               </div>
               <div className="menu_item">
-                <Link to="/domino-5">{t("header.header-types-domino-5")}</Link>
+                <Link
+                  to={i18n.language === 'ru' ? "/domino-5" : "/all-fives-dominoes"}>{t("header.header-types-domino-5")}
+                </Link>
               </div>
               <div className="menu_item">
-                <Link to="/domino-blok">{t("header.header-types-domino-blok")}</Link>
+                <Link
+                  to={i18n.language === "ru" ? "/domino-blok" : "/blocks-dominoes"}>{t("header.header-types-domino-blok")}
+                </Link>
               </div>
             </div>
           </li>
           <li className="list_item">
-            <Link to="/strategiya-v-domino">{t("header.header-strategy")}</Link>
+            <Link
+              to={i18n.language === "ru" ? "/strategiya-v-domino" : "/how-to-play-dominoes"}>
+              {t("header.header-strategy")}
+            </Link>
           </li>
         </ul>
       </nav>

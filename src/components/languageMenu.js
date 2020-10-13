@@ -8,7 +8,6 @@ import enLogo from "images/dominoes/us.png"
 const LanguageMenu = props => {
   // const intl = useIntl()
   const { t, i18n } = useTranslation()
-  const currentPathName = window.location.pathname;
 
   const [language, setValues] = useState({
     language: "en",

@@ -17,6 +17,7 @@ import advantage02 from "images/dominoes/advantage-2.jpg"
 import advantage03 from "images/dominoes/advantage-3.jpg"
 import advantage04 from "images/dominoes/advantage-4.jpg"
 import arrowRight from "images/dominoes/right-arrow.png"
+import i18n from "../i18n/config"
 
 const Wrapper = props => {
   const { t } = useTranslation()
@@ -136,7 +137,7 @@ const Wrapper = props => {
               </h2>
               <p className="content_text">{t("istoriya-domino.about-text")}</p>
               <div className="content_link">
-                <Link to="/istoriya-domino">{t("istoriya-domino.about-anchor")}</Link>
+                <Link to={i18n.language === "ru" ? "/istoriya-domino" : "/history-of-dominoes"}>{t("istoriya-domino.about-anchor")}</Link>
                 <img src={arrowRight} alt="Dominoes" />
               </div>
             </div>
@@ -185,7 +186,7 @@ const Wrapper = props => {
               </h2>
               <p className="content_text">{t("strategiya-v-domino.strategy-text")}</p>
               <div className="content_link">
-                <Link to="/strategiya-v-domino">{t("strategiya-v-domino.strategy-anchor")}</Link>
+                <Link to={i18n.language === "ru" ? "/strategiya-v-domino" : "/how-to-play-dominoes"}>{t("strategiya-v-domino.strategy-anchor")}</Link>
                 <img src={arrowRight} alt="Dominoes" />
               </div>
             </div>

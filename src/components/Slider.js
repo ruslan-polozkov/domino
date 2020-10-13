@@ -1,13 +1,12 @@
 import React, { Component, useEffect } from "react"
 import Slider from "react-slick"
 import { useTranslation } from "react-i18next"
-import { useIntl } from "gatsby-plugin-intl"
+import i18n from "./../i18n/config";
 
 import { Link } from "gatsby"
 
 const SliderMy = () => {
   const { t } = useTranslation()
-  // const intl = useIntl()
   const settings = {
     dots: true,
     infinite: true,
@@ -51,7 +50,10 @@ const SliderMy = () => {
             </div>
             <div className="inner_text">{t("slider.slider_item_text_01")}</div>
             <div className="inner_link">
-              <Link to={"/domino-bloc"} target="_blank">{t("slider.slider_item_more")}</Link>
+              <Link
+                to={i18n.language === "ru" ? "/domino-bloc" : "/blocks-dominoes"} target="_blank">
+                {t("slider.slider_item_more")}
+              </Link>
             </div>
           </div>
         </div>
@@ -62,7 +64,10 @@ const SliderMy = () => {
             </div>
             <div className="inner_text">{t("slider.slider_item_text_02")}</div>
             <div className="inner_link">
-              <Link to="/dominoes-rules">{t("slider.slider_item_more")}</Link>
+              <Link
+                to={i18n.language === "ru" ? "/domino-klassicheskoe" : "/dominoes-rules"}>
+                {t("slider.slider_item_more")}
+              </Link>
             </div>
           </div>
         </div>
@@ -73,7 +78,10 @@ const SliderMy = () => {
             </div>
             <div className="inner_text">{t("slider.slider_item_text_03")}</div>
             <div className="inner_link">
-              <Link to="/domino-5">{t("slider.slider_item_more")}</Link>
+              <Link
+                to={i18n.language === "ru" ? "/domino-5" : "/all-fives-dominoes"}>
+                {t("slider.slider_item_more")}
+              </Link>
             </div>
           </div>
         </div>
@@ -84,7 +92,10 @@ const SliderMy = () => {
             </div>
             <div className="inner_text">{t("slider.slider_item_text_04")}</div>
             <div className="inner_link">
-              <Link to="/domino-online">{t("slider.slider_item_more")}</Link>
+              <Link
+                to={i18n.language === "ru" ? "/domino-online" : "/dominoes-online"}>
+                {t("slider.slider_item_more")}
+              </Link>
             </div>
           </div>
         </div>
