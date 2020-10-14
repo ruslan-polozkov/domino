@@ -13,8 +13,6 @@ import strategy from "images/dominoes/second-pages/strategiya-v-domino.jpg"
 
 const Wrapper = path => {
   let heroImage;
-  // const intl = useIntl()
-  // console.log('wrapper second intl', intl)
   const { t } = useTranslation()
   const pathRoute = path.props ? path.props.replace(/\//g, '') : path.replace(/\//g, '');
   // const pathRoute = path.props.replace(`/${intl.locale}/`, '').replace(/\//g, '')
@@ -44,10 +42,7 @@ const Wrapper = path => {
     heroImage = blockDominoes;
   }
 
-  // useEffect(() => {
-  //   let htmlText = JSON.stringify(t(`${pathRoute}.content_text`))
-  //   document.querySelector('.content_test').append(htmlText);
-  // })
+  console.log(t(`${pathRoute}.p`))
 
   return (
     <div className="wrapper">
@@ -61,7 +56,16 @@ const Wrapper = path => {
               <div className="content_img">
                 <img src={heroImage} alt="Dominoes" />
               </div>
-              <div className="content_text">{t(`${pathRoute}.content_text`)}</div>
+              {/*<div className="content_text">*/}
+              {/*  {t(`${pathRoute}.content_text`)}*/}
+              {/*</div>*/}
+              <div className="content_text">
+                {Object.values(t(`${pathRoute}.p`)[0]).map((keyName, i) => (
+                  <p className="text_paragraph" key={i}>
+                    {keyName}
+                  </p>
+                ))}
+              </div>
             </div>
           </div>
         </article>
