@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next"
 import LanguageMenu from "./languageMenu"
 import i18n from "./../i18n/config";
 
-const Navigation = () => {
+const Navigation = (path) => {
   const { t } = useTranslation()
   const [openMenu, setOpenMenu] = useState(false);
 
@@ -63,7 +63,7 @@ const Navigation = () => {
           </li>
         </ul>
       </nav>
-      <LanguageMenu />
+      <LanguageMenu path={path}/>
     </div>
   )
 }

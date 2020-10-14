@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react"
 import { useTranslation } from "react-i18next"
-import { useIntl, Link, FormattedMessage } from "gatsby-plugin-intl"
 
 import ruLogo from "images/dominoes/ru.png"
 import enLogo from "images/dominoes/us.png"
 
-const LanguageMenu = props => {
-  // const intl = useIntl()
+const LanguageMenu = (data) => {
+  console.log('LanguageMenu path', data)
   const { t, i18n } = useTranslation()
 
   const [language, setValues] = useState({
@@ -18,6 +17,16 @@ const LanguageMenu = props => {
   const toggleOpen = () => setIsOpen(!isOpen)
 
   function handleChange(event) {
+
+    if (language.language === 'en') {
+      console.log('en')
+      if (data.path.path === 'istoriya-domino') {
+
+      }
+    } else {
+      console.log('ru')
+    }
+
     i18n.changeLanguage(event.target.closest(".menu_item").dataset.value)
 
     setValues({ language: event.target.closest(".menu_item").dataset.value })

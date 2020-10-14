@@ -5,7 +5,7 @@ import Burger from "../Burger"
 
 import "./header.scss"
 
-const Header = ({ siteTitle }) => {
+const Header = ({ path, siteTitle }) => {
   const [open, setOpen] = useState(false)
 
   const setOpenedHeaderState = () => {
@@ -51,7 +51,7 @@ const Header = ({ siteTitle }) => {
       <div className="global-container">
         <div className="header_inner">
           <Logo />
-          <Navigation />
+          <Navigation path={path}/>
           <Burger onClick={setOpenedHeaderState} open={setOpenedHeaderState} />
         </div>
       </div>

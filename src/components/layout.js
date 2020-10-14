@@ -16,7 +16,7 @@ import ToUp from "./ToUp";
 
 import "./layout.scss"
 
-const Layout = ({ children, t, i18n }) => {
+const Layout = ({ path, children, t, i18n }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -31,7 +31,7 @@ const Layout = ({ children, t, i18n }) => {
 
   return (
     <>
-      <Header siteTitle={translatedTitle} />
+      <Header path={path} siteTitle={translatedTitle} />
       {children}
       <Footer />
       <ToUp />
