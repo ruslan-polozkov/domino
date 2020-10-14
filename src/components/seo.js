@@ -8,11 +8,13 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
+import { useTranslation } from "react-i18next"
 import { useStaticQuery, graphql } from "gatsby"
 
 import phone from "images/dominoes/phone-domino.png"
 
 function SEO({ description, lang, meta, title }) {
+  const { t } = useTranslation()
   const { site } = useStaticQuery(
     graphql`
       query {

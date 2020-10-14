@@ -2,8 +2,8 @@ const path = require("path")
 
 module.exports = {
   siteMetadata: {
-    title: `Domino`,
-    description: `Best game domino.`,
+    title: `Dominoes are a fun way to relax!`,
+    description: `Dominoes is a popular board game in which players line up a chain of dice that meet in halves with the same number of points.`,
     author: `Ruslan Polozkov`,
   },
   plugins: [
