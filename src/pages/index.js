@@ -34,23 +34,12 @@ const IndexPage = ({ path, children }) => {
   data.path = path
 
   return (
-    <AppBanner
-      appInfo={appInfo}
-      position="bottom"
-      onClose={() => {
-        console.log("onClose called")
-      }}
-      hidden={false}
-      style={{
-        zIndex: 10,
-      }}>
       <BrowserRouter>
         <Layout path={path}>
           <SEO title="Home" />
           <Wrapper {...data} />
         </Layout>
       </BrowserRouter>
-    </AppBanner>
   )
 }
 

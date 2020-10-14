@@ -18,6 +18,7 @@ import advantage03 from "images/dominoes/advantage-3.jpg"
 import advantage04 from "images/dominoes/advantage-4.jpg"
 import arrowRight from "images/dominoes/right-arrow.png"
 import i18n from "../i18n/config"
+import AppBanner from "smart-app-banner-react"
 
 const Wrapper = props => {
   const { t } = useTranslation()
@@ -98,6 +99,16 @@ const Wrapper = props => {
 
   return (
     <div className="wrapper">
+      <AppBanner
+        appInfo={appInfo}
+        position="bottom"
+        onClose={() => {
+          console.log("onClose called")
+        }}
+        hidden={false}
+        style={{
+          zIndex: 10,
+        }} />
       <BackgroundImage fluid={props.desktop.childImageSharp.fluid}>
         <article className="hero">
           <div className="shadow"></div>
