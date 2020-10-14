@@ -18,21 +18,21 @@ import advantage03 from "images/dominoes/advantage-3.jpg"
 import advantage04 from "images/dominoes/advantage-4.jpg"
 import arrowRight from "images/dominoes/right-arrow.png"
 import i18n from "../i18n/config"
-import AppBanner from "smart-app-banner-react"
+// import AppBanner from "smart-app-banner-react"
 
 const Wrapper = props => {
   const { t } = useTranslation()
   const [accordionState, accordionSetState] = useState("01")
-  const appInfo = {
-    imageUrl:
-      "https://lh3.googleusercontent.com/ccWDU4A7fX1R24v-vvT480ySh26AYp97g1VrIB_FIdjRcuQB2JP2WdY7h_wVVAeSpg=s360-rw",
-    name: "Dominoes",
-    publisher: "Dominoes",
-    infoText: "Dominoes best game",
-    linkButtonText: "VIEW",
-    linkUrl:
-      "https://play.google.com/store/apps/details?id=loppipoppi.dominoes&hl=en",
-  }
+  // const appInfo = {
+  //   imageUrl:
+  //     "https://lh3.googleusercontent.com/ccWDU4A7fX1R24v-vvT480ySh26AYp97g1VrIB_FIdjRcuQB2JP2WdY7h_wVVAeSpg=s360-rw",
+  //   name: "Dominoes",
+  //   publisher: "Dominoes",
+  //   infoText: "Dominoes best game",
+  //   linkButtonText: "VIEW",
+  //   linkUrl:
+  //     "https://play.google.com/store/apps/details?id=loppipoppi.dominoes&hl=en",
+  // }
   const settingsSlider = {
     speed: 500,
     slidesToScroll: 1,
@@ -109,17 +109,17 @@ const Wrapper = props => {
 
   return (
     <div className="wrapper">
-      <AppBanner
-        appInfo={appInfo}
-        position="top"
-        onClose={() => {
-          console.log('onClose called');
-        }}
-        hidden={false}
-        style={{
-          zIndex: 10,
-        }}
-      />
+      {/*<AppBanner*/}
+      {/*  appInfo={appInfo}*/}
+      {/*  position="top"*/}
+      {/*  onClose={() => {*/}
+      {/*    console.log('onClose called');*/}
+      {/*  }}*/}
+      {/*  hidden={false}*/}
+      {/*  style={{*/}
+      {/*    zIndex: 10,*/}
+      {/*  }}*/}
+      {/*/>*/}
       <BackgroundImage fluid={props.desktop.childImageSharp.fluid}>
         <article className="hero">
           <div className="shadow"></div>

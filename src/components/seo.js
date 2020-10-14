@@ -53,7 +53,8 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `google-play-app`,
-          content: 'app-id=loppipoppi.dominoes&hl=en'
+          // content: 'app-id=loppipoppi.dominoes&hl=en'
+          content: 'app-id=com.facebook.katana'
         },
         {
           property: `og:title`,
