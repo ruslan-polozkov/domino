@@ -31,6 +31,8 @@
     "react-router-dom": "^5.2.0",
     "react-slick": "^0.27.11",
     "slick-carousel": "^1.8.1",
+    "smart-app-banner": "^2.0.0",
+    "smart-app-banner-react": "^1.0.4",
     "use-scroll-position": "0.0.4",
     "window-scroll-position": "^1.0.2"
   },
