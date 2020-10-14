@@ -23,11 +23,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Dominoes`,
+        short_name: `Dominoes`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#4aac00`,
+        theme_color: `#4aac00`,
         display: `minimal-ui`,
         icon: `src/images/dominoes/logo.png`, // This path is relative to the root of the site.
       },
