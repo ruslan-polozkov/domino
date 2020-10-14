@@ -39,6 +39,10 @@
                 height: 7rem;
                 max-width: 100%;
 
+                img {
+                  min-height: 7rem;
+                }
+
                 &:first-child {
                   margin-right: 1.8rem;
                 }

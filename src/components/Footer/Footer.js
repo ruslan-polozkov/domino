@@ -10,6 +10,8 @@ import "./footer.scss"
 
 import apple from "images/dominoes/logo-app-store.png"
 import google from "images/dominoes/logo-gplay.png"
+import apptest from "images/dominoes/apptest.svg"
+import googleEn from "images/dominoes/google-play-badge.png"
 
 const Footer = () => {
   // const intl = useIntl()
@@ -45,12 +47,12 @@ const Footer = () => {
                 <div className="inner_img">
                   <div className="img img_apple">
                     <Link to="https://apps.apple.com/us/app/dominoes-board-game/id1492160489" target="_blank">
-                      <img src={apple} alt="Dominoes" />
+                      <img src={i18n.language === 'ru' ? apple : apptest} alt="Dominoes" />
                     </Link>
                   </div>
                   <div className="img img_google">
                     <Link to="https://play.google.com/store/apps/details?id=loppipoppi.dominoes&hl=en" target="_blank">
-                      <img src={google} alt="Dominoes" />
+                      <img src={i18n.language === 'ru' ? google : googleEn} alt="Dominoes" />
                     </Link>
                   </div>
                 </div>
