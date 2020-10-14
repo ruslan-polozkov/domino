@@ -32,7 +32,7 @@ const NotFoundPage = ({ path, children }) => {
                 <div className="content_title">
                   <h2>{t("error.content_title")}</h2>
                   <Link to={'/'}>
-                    {t("error.content_link")}
+                    This page not found
                   </Link>
                 </div>
                 <div className="content_img">
