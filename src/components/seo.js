@@ -53,7 +53,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `google-play-app`,
-          content: 'app-id=loppipoppi.dominoes&hl=en, affiliate-data=myAffiliateData, app-argument=dominoes.com'
+          content: 'app-id=loppipoppi.dominoes&hl=en'
         },
         {
           property: `og:title`,
