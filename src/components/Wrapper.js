@@ -111,14 +111,15 @@ const Wrapper = props => {
     <div className="wrapper">
       <AppBanner
         appInfo={appInfo}
-        position="bottom"
+        position="top"
         onClose={() => {
-          console.log("onClose called")
+          console.log('onClose called');
         }}
         hidden={false}
         style={{
           zIndex: 10,
-        }} />
+        }}
+      />
       <BackgroundImage fluid={props.desktop.childImageSharp.fluid}>
         <article className="hero">
           <div className="shadow"></div>

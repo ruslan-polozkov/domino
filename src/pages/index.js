@@ -1,5 +1,4 @@
 import React from "react"
-import { BrowserRouter } from "react-router-dom"
 import Layout from "../components/layout"
 import Wrapper from "../components/Wrapper"
 import SEO from "../components/seo"
@@ -23,12 +22,10 @@ const IndexPage = ({ path, children }) => {
   data.path = path
 
   return (
-      <BrowserRouter>
-        <Layout path={path}>
-          <SEO title="Home" />
-          <Wrapper {...data} />
-        </Layout>
-      </BrowserRouter>
+    <Layout path={path}>
+      <SEO title="Home" />
+      <Wrapper {...data} />
+    </Layout>
   )
 }
 
