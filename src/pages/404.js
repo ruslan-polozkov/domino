@@ -30,9 +30,9 @@ const NotFoundPage = ({ path, children }) => {
             <div className="global-container">
               <div className="main_content">
                 <div className="content_title">
-                  <h2>{t(`error.content_title`)}</h2>
+                  <h2>{t("error.content_title")}</h2>
                   <Link to={'/'}>
-                    {t(`error.content_link`)}
+                    {t("error.content_link")}
                   </Link>
                 </div>
                 <div className="content_img">
