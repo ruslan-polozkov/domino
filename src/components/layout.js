@@ -29,8 +29,6 @@ const Layout = ({ children, t, i18n }) => {
 
   const translatedTitle = t(`site.${data.site.siteMetadata.title}`)
 
-  console.log('useEffect')
-
   return (
     <>
       <Header siteTitle={translatedTitle} />

@@ -42,8 +42,6 @@ const Wrapper = path => {
     heroImage = blockDominoes;
   }
 
-  console.log(t(`${pathRoute}.p`))
-
   return (
     <div className="wrapper">
       <BackgroundImage fluid={data.desktop.childImageSharp.fluid}>
