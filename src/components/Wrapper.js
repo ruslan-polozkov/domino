@@ -23,6 +23,16 @@ import AppBanner from "smart-app-banner-react"
 const Wrapper = props => {
   const { t } = useTranslation()
   const [accordionState, accordionSetState] = useState("01")
+  const appInfo = {
+    imageUrl:
+      "https://lh3.googleusercontent.com/ccWDU4A7fX1R24v-vvT480ySh26AYp97g1VrIB_FIdjRcuQB2JP2WdY7h_wVVAeSpg=s360-rw",
+    name: "Dominoes",
+    publisher: "Dominoes",
+    infoText: "Dominoes best game",
+    linkButtonText: "VIEW",
+    linkUrl:
+      "https://play.google.com/store/apps/details?id=loppipoppi.dominoes&hl=en",
+  }
   const settingsSlider = {
     speed: 500,
     slidesToScroll: 1,
