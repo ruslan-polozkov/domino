@@ -67,7 +67,32 @@
   &.error {
     .main_content {
       .content {
+        &_title {
 
+          h2 {
+            margin-bottom: 14rem;
+          }
+
+          a {
+            border: 1px solid #cccccc;
+            border-radius: 3px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: .6rem 1.2rem;
+            font-size: 2rem;
+            color: #000;
+            transition: 240ms;
+            box-shadow: 0 0 2px rgba(0,0,0, .3);
+
+            &:hover {
+              text-decoration: none;
+              box-shadow: none;
+              color: #fff;
+              background-color: #000;
+            }
+          }
+        }
 
         &_img {
           height: 241px;

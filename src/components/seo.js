@@ -42,6 +42,10 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
+          name: "theme-color",
+          content: "#4aac00"
+        },
+        {
           name: `apple-itunes-app`,
           content: 'app-id=1434957889, affiliate-data=myAffiliateData, app-argument=dominoes.com'
         },
