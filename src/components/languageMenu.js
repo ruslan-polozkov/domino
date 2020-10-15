@@ -5,31 +5,59 @@ import ruLogo from "images/dominoes/ru.png"
 import enLogo from "images/dominoes/us.png"
 
 const LanguageMenu = (data) => {
-  console.log('LanguageMenu path', data)
   const { t, i18n } = useTranslation()
 
   const [language, setValues] = useState({
-    language: "en",
+    language: (i18n.language === 'en' || !i18n.language) ? "en" : "ru",
   })
+
+  console.log(language.language)
 
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleOpen = () => setIsOpen(!isOpen)
 
   function handleChange(event) {
+    i18n.changeLanguage(event.target.closest(".menu_item").dataset.value)
+    setValues({ language: event.target.closest(".menu_item").dataset.value })
 
-    if (language.language === 'en') {
-      console.log('en')
-      if (data.path.path === 'istoriya-domino') {
-
+    if (event.target.closest(".menu_item").dataset.value === 'en') {
+      switch (window.location.pathname.replace(/\//g, '')) {
+        case "istoriya-domino":
+          window.location.href = window.location.origin + '/' + 'history-of-dominoes'
+          return;
+        case "domino-online":
+          window.location.href = window.location.origin + '/' + 'dominoes-online'
+          return;
+        case "domino-klassicheskoe":
+          window.location.href = window.location.origin + '/' + 'dominoes-rules'
+          return;
+        case "domino-5":
+          window.location.href = window.location.origin + '/' + 'all-fives-dominoes'
+          return;
+        case "domino-blok":
+          window.location.href = window.location.origin + '/' + 'blocks-dominoes'
+          return;
       }
     } else {
-      console.log('ru')
+      switch (window.location.pathname.replace(/\//g, '')) {
+        case "history-of-dominoes":
+          window.location.href = window.location.origin + '/' + 'istoriya-domino'
+          return;
+        case "dominoes-online":
+          window.location.href = window.location.origin + '/' + 'domino-online'
+          return;
+        case "dominoes-rules":
+          window.location.href = window.location.origin + '/' + 'domino-klassicheskoe'
+          return;
+        case "all-fives-dominoes":
+          window.location.href = window.location.origin + '/' + 'domino-5'
+          return;
+        case "blocks-dominoes":
+          window.location.href = window.location.origin + '/' + 'domino-blok'
+          return;
+      }
     }
-
-    i18n.changeLanguage(event.target.closest(".menu_item").dataset.value)
-
-    setValues({ language: event.target.closest(".menu_item").dataset.value })
   }
 
   useEffect(() => {

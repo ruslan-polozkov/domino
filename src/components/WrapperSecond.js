@@ -2,7 +2,6 @@ import React, { useEffect } from "react"
 import BackgroundImage from "gatsby-background-image"
 import { useTranslation } from "react-i18next"
 import { graphql, useStaticQuery } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
 
 import fives from "images/dominoes/second-pages/all-fives-dominoes.jpeg"
 import blockDominoes from "images/dominoes/second-pages/blocks-dominoes.jpg"
@@ -13,9 +12,8 @@ import strategy from "images/dominoes/second-pages/strategiya-v-domino.jpg"
 
 const Wrapper = path => {
   let heroImage;
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const pathRoute = path.props ? path.props.replace(/\//g, '') : path.replace(/\//g, '');
-  // const pathRoute = path.props.replace(`/${intl.locale}/`, '').replace(/\//g, '')
   const data = useStaticQuery(graphql`
     query {
       desktop: file(relativePath: { eq: "dominoes/main-bg.jpg" }) {
@@ -42,6 +40,18 @@ const Wrapper = path => {
     heroImage = blockDominoes;
   }
 
+  if (!i18n.language) {
+    if (
+      pathRoute === 'istoriya-domino' ||
+      pathRoute === 'strategiya-v-domino' ||
+      pathRoute === 'domino-online' ||
+      pathRoute === 'domino-klassicheskoe' ||
+      pathRoute === 'domino-5'
+    ) {
+      i18n.changeLanguage('ru')
+    }
+  }
+
   return (
     <div className="wrapper">
       <BackgroundImage fluid={data.desktop.childImageSharp.fluid}>
@@ -54,9 +64,6 @@ const Wrapper = path => {
               <div className="content_img">
                 <img src={heroImage} alt="Dominoes" />
               </div>
-              {/*<div className="content_text">*/}
-              {/*  {t(`${pathRoute}.content_text`)}*/}
-              {/*</div>*/}
               <div className="content_text">
                 {Object.values(t(`${pathRoute}.p`)[0]).map((keyName, i) => (
                   <p className="text_paragraph" key={i}>

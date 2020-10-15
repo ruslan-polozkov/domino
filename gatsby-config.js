@@ -40,26 +40,12 @@ module.exports = {
         images: path.join(__dirname, "src/images"),
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-intl`,
-    //   options: {
-    //     // language JSON resource path
-    //     path: `${__dirname}/src/locales`,
-    //     // supported language
-    //     languages: [`en`, `ru`],
-    //     defaultLanguage: `en`,
-    //     // option to redirect to `/ko` when connecting `/`
-    //     redirect: true,
-    //   }
-    // }
-    // {
-    //   resolve: `gatsby-plugin-layout`,
-    //   options: {
-    //     component: `${__dirname}/src/components/layout.js`
-    //   }
-    // },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "dominoes.com",
+        head: true,
+      }
+    }
   ],
 }
